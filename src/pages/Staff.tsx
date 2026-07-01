@@ -47,30 +47,29 @@ const scientists = [
 const Staff = () => {
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/90 backdrop-blur border-b border-gray-200">
-        <Link to="/" className="flex items-center gap-2">
-          <Compass className="w-5 h-5" />
-          <span className="font-medium">Ильменский заповедник</span>
-        </Link>
-        <Link
-          to="/"
-          className="px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-100 transition-colors"
-        >
-          ← На главную
-        </Link>
-      </nav>
-
-      {/* Hero — фото музея с заголовком */}
-      <div className="relative h-72 overflow-hidden pt-16">
+      {/* Hero — на всю ширину страницы, навигация поверх */}
+      <div className="relative w-full overflow-hidden">
         <img
           src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/e2ceb8c9-54e4-4fc0-a655-eff0c0b5d7fa.png"
           alt="Музей заповедника"
-          className="w-full h-full object-cover object-top"
+          className="w-full block"
+          style={{ maxHeight: 420, objectFit: "cover", objectPosition: "center top" }}
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute bottom-8 left-8">
-          <h1 className="text-4xl md:text-5xl font-black text-white uppercase leading-tight">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        {/* Навигация поверх шапки */}
+        <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-6 py-4">
+          <Link to="/" className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 text-sm font-medium backdrop-blur hover:bg-white transition-colors">
+            <Compass className="w-4 h-4" />
+            <span>Ильменский заповедник</span>
+          </Link>
+          <Link to="/" className="px-4 py-2 text-sm font-medium rounded-full bg-white/80 backdrop-blur hover:bg-white transition-colors">
+            ← На главную
+          </Link>
+        </div>
+
+        <div className="absolute bottom-8 left-8 right-8">
+          <h1 className="text-4xl md:text-6xl font-black text-white uppercase leading-tight"
+            style={{ fontFamily: "'Nunito Sans','Rubik',sans-serif" }}>
             Сотрудники музея<br />заповедника
           </h1>
         </div>

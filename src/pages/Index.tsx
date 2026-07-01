@@ -1,6 +1,7 @@
 import { Compass, Lock, Sparkles, ShieldCheck, Wallet, Leaf, Plus, Minus, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 interface FAQ {
   question: string
@@ -70,6 +71,12 @@ const Index = () => {
                 {item}
               </a>
             ))}
+            <Link
+              to="/staff"
+              className="px-4 py-2 bg-black/40 ring-1 ring-white/20 backdrop-blur rounded-full hover:bg-black/50 transition-colors"
+            >
+              Сотрудники
+            </Link>
           </div>
 
           {/* Action Buttons */}

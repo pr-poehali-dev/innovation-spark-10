@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=cyrillic,latin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&subset=cyrillic,latin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap");
+
+/* Radiotechnika — подключаем через CDN */
+@font-face {
+  font-family: "Radiotechnika";
+  src:
+    url("https://cdn.jsdelivr.net/gh/nicothin/fonts@master/Radiotechnika/Radiotechnika.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/nicothin/fonts@master/Radiotechnika/Radiotechnika.woff")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -92,6 +106,6 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
   }
 }

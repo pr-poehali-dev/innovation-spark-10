@@ -95,72 +95,129 @@ const Index = () => {
     <div className="min-h-screen bg-white text-[#2a2a2a]" style={{ fontFamily: "'Rubik', 'Inter', sans-serif" }}>
 
       {/* ══ HERO ══ */}
-      <div className="relative overflow-hidden bg-white" style={{ minHeight: 560 }}>
+      <div className="relative overflow-hidden bg-white" style={{ minHeight: 520 }}>
 
-        {/* Соцсети */}
-        <div className="absolute top-4 right-6 flex gap-2 z-20">
+        {/* Соцсети — правый верхний угол */}
+        <div className="absolute top-4 right-5 flex gap-2 z-30">
           {[{ icon: "AtSign" }, { icon: "Users" }, { icon: "Play" }].map((s, i) => (
-            <a key={i} href="#" className="w-9 h-9 rounded-full bg-white/80 border border-gray-200 flex items-center justify-center hover:bg-white shadow-sm transition">
-              <Icon name={s.icon} size={15} className="text-gray-600" />
+            <a key={i} href="#" className="w-8 h-8 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center hover:bg-white shadow-sm transition">
+              <Icon name={s.icon} size={13} className="text-gray-500" />
             </a>
           ))}
         </div>
 
-        {/* Трава — нижний слой */}
+        {/* Сосна — слева */}
+        <img
+          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/files/fcdc1f46-b998-490d-91db-9263ae932557.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute left-0 bottom-0 pointer-events-none select-none z-10"
+          style={{
+            height: "88%",
+            width: "22%",
+            objectFit: "contain",
+            objectPosition: "bottom left",
+            mixBlendMode: "multiply",
+          }}
+        />
+
+        {/* Сосна — правее центра (вторая, меньше) */}
+        <img
+          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/files/fcdc1f46-b998-490d-91db-9263ae932557.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute pointer-events-none select-none z-10"
+          style={{
+            right: "28%",
+            bottom: 0,
+            height: "72%",
+            width: "14%",
+            objectFit: "contain",
+            objectPosition: "bottom center",
+            mixBlendMode: "multiply",
+            opacity: 0.85,
+          }}
+        />
+
+        {/* Трава — нижний слой, на всю ширину */}
         <img
           src={GRASS_IMG}
           alt=""
           aria-hidden="true"
-          className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
-          style={{ height: "52%", objectFit: "cover", objectPosition: "bottom" }}
-        />
-
-        {/* Олень — справа */}
-        <img
-          src={DEER_IMG}
-          alt="Косуля Ильменского заповедника"
-          className="absolute right-0 bottom-0 pointer-events-none select-none"
+          className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none z-20"
           style={{
-            height: "70%",
-            maxWidth: "44%",
+            height: "38%",
             objectFit: "cover",
-            objectPosition: "top center",
-            maskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 15%, black 75%, transparent 100%), linear-gradient(to left, black 70%, transparent 100%)",
-            maskComposite: "intersect",
-            WebkitMaskComposite: "destination-in",
+            objectPosition: "bottom center",
+            mixBlendMode: "multiply",
           }}
         />
 
-        {/* Заголовок */}
-        <div className="relative z-10 pt-10 pb-4 px-6 md:px-12 max-w-xl">
-          <p className="text-xs md:text-sm uppercase tracking-widest text-gray-400 mb-1 font-light">
+        {/* Олень — справа, ч/б иллюстрация */}
+        <img
+          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/files/53bd9520-a59c-4537-8958-2b9b3c2fef41.jpg"
+          alt="Косуля Ильменского заповедника"
+          className="absolute pointer-events-none select-none z-20"
+          style={{
+            right: "3%",
+            bottom: "22%",
+            height: "52%",
+            width: "22%",
+            objectFit: "contain",
+            objectPosition: "bottom center",
+            mixBlendMode: "multiply",
+            filter: "grayscale(100%)",
+          }}
+        />
+
+        {/* Заголовок — по центру */}
+        <div className="relative z-25 flex flex-col items-center text-center pt-10 pb-2 px-4" style={{ zIndex: 25 }}>
+          <p
+            className="text-[11px] uppercase tracking-[0.2em] text-gray-400 mb-1"
+            style={{ fontFamily: "'Rubik', sans-serif", fontWeight: 300 }}
+          >
             Южноуральский государственный
           </p>
           <h1
-            className="text-5xl md:text-7xl uppercase leading-none text-[#2a2a2a]"
+            className="uppercase leading-none text-[#2a2a2a]"
             style={{
               fontFamily: "'Radiotechnika', 'Rubik', sans-serif",
               fontWeight: 900,
-              letterSpacing: "0.02em",
+              fontSize: "clamp(3rem, 9vw, 7rem)",
+              letterSpacing: "0.01em",
+              lineHeight: 1,
             }}
           >
             Ильменский<br />заповедник
           </h1>
-          <p className="mt-4 text-gray-500 text-sm md:text-base max-w-sm leading-relaxed">
+          <p className="mt-3 text-gray-500 text-sm max-w-xs leading-relaxed">
             Охраняемая природная территория с уникальными экологическими ландшафтами Урала
           </p>
         </div>
 
-        {/* Навигация */}
-        <nav className="relative z-10 flex flex-wrap gap-2 px-6 md:px-12 pb-8 pt-4">
-          {navLinks.map((link) =>
+        {/* Навигация — горизонтально по центру, поверх травы */}
+        <nav className="relative flex flex-wrap justify-center gap-2 px-6 pb-6 pt-4" style={{ zIndex: 30 }}>
+          {navLinks.map((link, idx) =>
             link.isRoute ? (
-              <Link key={link.label} to={link.href} className="px-5 py-1.5 rounded-full text-sm font-medium bg-[#6b7c2e] text-white hover:bg-[#5a6a25] transition-colors">
+              <Link
+                key={link.label}
+                to={link.href}
+                className="px-5 py-1.5 rounded-full text-sm font-medium text-white transition-colors"
+                style={{ backgroundColor: "#6b7c2e" }}
+              >
                 {link.label}
               </Link>
             ) : (
-              <a key={link.label} href={link.href} className="px-5 py-1.5 rounded-full text-sm font-medium bg-white/80 text-gray-700 border border-gray-200 hover:bg-white transition-colors backdrop-blur">
+              <a
+                key={link.label}
+                href={link.href}
+                className="px-5 py-1.5 rounded-full text-sm font-medium transition-colors"
+                style={{
+                  backgroundColor: idx === 0 ? "#6b7c2e" : "rgba(255,255,255,0.85)",
+                  color: idx === 0 ? "#fff" : "#444",
+                  border: idx === 0 ? "none" : "1px solid #ddd",
+                }}
+              >
                 {link.label}
               </a>
             )

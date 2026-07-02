@@ -181,7 +181,9 @@ const Index = () => {
           src={HERO_IMG}
           alt="Ильменский заповедник"
           className="w-full block"
-          style={{ objectFit: "contain", objectPosition: "top center" }}
+          decoding="async"
+          fetchPriority="high"
+          style={{ objectFit: "contain", objectPosition: "top center", imageRendering: "high-quality" } as React.CSSProperties}
         />
 
         {/* Навигация — поверх внизу, с запасом пространства */}
@@ -510,7 +512,9 @@ const Index = () => {
           src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/c5ad0bad-64a3-4e3a-922c-4f66039ec385.png"
           alt="Ждём вас в гости"
           className="w-full block"
-          style={{ objectFit: "cover" }}
+          decoding="async"
+          fetchPriority="high"
+          style={{ objectFit: "cover", imageRendering: "high-quality" } as React.CSSProperties}
         />
         {/* Надпись поверх — в белой зоне между соснами */}
         <div className="absolute inset-0 flex items-start justify-center"

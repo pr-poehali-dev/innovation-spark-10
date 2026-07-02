@@ -115,25 +115,25 @@ const excursions = [
 ]
 
 const collections = [
-  { title: "Минералогический зал", subtitle: "Экспозиция минералов Ильменских гор", img: "https://thb.tildacdn.com/tild3439-6561-4534-a636-363036306266/photo.jpg", fb: "https://images.unsplash.com/photo-1567428485548-c499e4962571?w=800&h=600&fit=crop" },
-  { title: "Зал природы", subtitle: "Флора и фауна заповедника", img: "https://thb.tildacdn.com/tild3833-3035-4834-b430-373061363161/photo.jpg", fb: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop" },
-  { title: "Ильменский зал", subtitle: "Уральский зал самоцветов", img: "https://thb.tildacdn.com/tild3964-6432-4534-b833-336233313932/photo.jpg", fb: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop" },
-  { title: "Геологический зал", subtitle: "Горные породы С.З. Ушков", img: "https://thb.tildacdn.com/tild3763-6635-4331-b539-363864323366/photo.jpg", fb: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&h=600&fit=crop" },
+  { title: "Минералогический зал", subtitle: "Экспозиция минералов Ильменских гор", img: "https://thb.tildacdn.com/tild3439-6561-4534-a636-363036306266/photo.jpg", fb: "https://images.unsplash.com/photo-1567428485548-c499e4962571?w=1200&h=900&fit=crop&q=100&fm=webp" },
+  { title: "Зал природы", subtitle: "Флора и фауна заповедника", img: "https://thb.tildacdn.com/tild3833-3035-4834-b430-373061363161/photo.jpg", fb: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1200&h=900&fit=crop&q=100&fm=webp" },
+  { title: "Ильменский зал", subtitle: "Уральский зал самоцветов", img: "https://thb.tildacdn.com/tild3964-6432-4534-b833-336233313932/photo.jpg", fb: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&h=900&fit=crop&q=100&fm=webp" },
+  { title: "Геологический зал", subtitle: "Горные породы С.З. Ушков", img: "https://thb.tildacdn.com/tild3763-6635-4331-b539-363864323366/photo.jpg", fb: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1200&h=900&fit=crop&q=100&fm=webp" },
 ]
 
 const announcements = [
-  { title: "Изучаем природу заповедника при помощи обслуживания", date: "10 мая", img: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=200&h=160&fit=crop", tag: "Мероприятие" },
-  { title: "Ночь науки в музее: обзор для любителей", date: "16 мая", img: "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=200&h=160&fit=crop", tag: "Ночь науки" },
-  { title: "С Днём Победы! Вход на 18:00 для ветеранов", date: "9 мая", img: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=200&h=160&fit=crop", tag: "Акция" },
-  { title: "Лекция: уральские самоцветы — с 18:00 до 19:00", date: "18 мая", img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=200&h=160&fit=crop", tag: "Лекция" },
+  { title: "Изучаем природу заповедника при помощи обслуживания", date: "10 мая", img: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=640&fit=crop&q=100&fm=webp", tag: "Мероприятие" },
+  { title: "Ночь науки в музее: обзор для любителей", date: "16 мая", img: "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=800&h=640&fit=crop&q=100&fm=webp", tag: "Ночь науки" },
+  { title: "С Днём Победы! Вход на 18:00 для ветеранов", date: "9 мая", img: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=640&fit=crop&q=100&fm=webp", tag: "Акция" },
+  { title: "Лекция: уральские самоцветы — с 18:00 до 19:00", date: "18 мая", img: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=640&fit=crop&q=100&fm=webp", tag: "Лекция" },
 ]
 
 const gallery = [
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=320&fit=crop",
-  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=320&fit=crop",
-  "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=500&h=320&fit=crop",
-  "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=500&h=320&fit=crop",
-  "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=500&h=320&fit=crop",
+  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&h=900&fit=crop&q=100&fm=webp",
+  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&h=900&fit=crop&q=100&fm=webp",
+  "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1400&h=900&fit=crop&q=100&fm=webp",
+  "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1400&h=900&fit=crop&q=100&fm=webp",
+  "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1400&h=900&fit=crop&q=100&fm=webp",
 ]
 
 const navLinks = [

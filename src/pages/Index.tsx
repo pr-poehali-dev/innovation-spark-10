@@ -222,7 +222,7 @@ const Index = () => {
         {/* Агат — справа вверху, как в макете */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none"
-          style={{ top: "-20px", right: "-30px", width: "clamp(160px, 18vw, 260px)", opacity: 0.82 }} />
+          style={{ top: "-40px", right: "-40px", width: "clamp(260px, 30vw, 420px)", opacity: 0.82 }} />
 
         <h2 style={T} className="mb-8">О заповеднике</h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -247,7 +247,7 @@ const Index = () => {
         <div className="relative mt-2">
           <img src={BIRD_IMG} alt="" aria-hidden="true"
             className="pointer-events-none select-none"
-            style={{ width: "clamp(110px, 13vw, 180px)", opacity: 0.78 }} />
+            style={{ width: "clamp(200px, 24vw, 340px)", opacity: 0.78 }} />
         </div>
       </section>
 
@@ -272,7 +272,7 @@ const Index = () => {
         {/* Агат поверх фото — правый нижний угол, как в макете */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none z-10"
-          style={{ right: "2%", bottom: "0", width: "clamp(140px, 16vw, 220px)", opacity: 0.7 }} />
+          style={{ right: "2%", bottom: "0", width: "clamp(220px, 26vw, 360px)", opacity: 0.7 }} />
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
@@ -348,7 +348,7 @@ const Index = () => {
         {/* Шишки — правый верхний угол, как в макете */}
         <img src={CONES_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none"
-          style={{ right: "-10px", top: "-60px", width: "clamp(120px, 14vw, 200px)", opacity: 0.75 }} />
+          style={{ right: "-10px", top: "-90px", width: "clamp(200px, 25vw, 360px)", opacity: 0.75 }} />
 
         <div className="max-w-6xl mx-auto">
           {/* Обёртка с рамкой — как в макете */}

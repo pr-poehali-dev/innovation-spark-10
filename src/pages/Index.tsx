@@ -268,10 +268,10 @@ const Index = () => {
 
         {/* Фото степи — фон правой половины */}
         <img
-          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/539fac6e-12fa-4bdd-868c-263f28c87344.jpg"
+          src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=95&fit=crop&auto=format"
           alt="" aria-hidden="true"
           className="absolute top-0 right-0 h-full pointer-events-none select-none"
-          style={{ width: "50%", objectFit: "cover", objectPosition: "center" }}
+          style={{ width: "50%", objectFit: "cover", objectPosition: "center", imageRendering: "auto" }}
           decoding="async"
         />
 

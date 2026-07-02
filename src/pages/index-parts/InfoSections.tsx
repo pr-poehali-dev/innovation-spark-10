@@ -30,16 +30,9 @@ export const AboutSection = () => (
 
 export const VisitorsSection = () => (
   <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
-    <img
-      src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=95&fit=crop&auto=format"
-      alt="" aria-hidden="true"
-      className="absolute top-0 right-0 h-full pointer-events-none select-none"
-      style={{ width: "50%", objectFit: "cover", objectPosition: "center", imageRendering: "auto" }}
-      decoding="async"
-    />
     <img src={AGATE_IMG} alt="" aria-hidden="true"
       className="absolute pointer-events-none select-none z-10"
-      style={{ right: 0, bottom: 0, width: "clamp(460px, 58vw, 780px)", opacity: 0.75 }} />
+      style={{ right: 0, bottom: 0, width: "clamp(600px, 72vw, 960px)", opacity: 0.85 }} />
 
     <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
       <h2 className="mb-8" style={{ ...T, color: "#fff" }}>

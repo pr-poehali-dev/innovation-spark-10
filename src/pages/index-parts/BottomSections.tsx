@@ -1,4 +1,4 @@
-import { G, KT, T, RADIO, PINE_IMG, announcements, gallery } from "./constants"
+import { G, KT, T, RADIO, CONES_IMG, announcements, gallery } from "./constants"
 
 interface BottomSectionsProps {
   galleryIndex: number
@@ -53,19 +53,19 @@ export const BottomSections = ({
     </section>
 
     <section className="relative py-14 px-6 md:px-16 overflow-hidden">
-      {/* Текстура дерева — левый край */}
+      {/* Еловые ветки — левый край */}
       <img
-        src={PINE_IMG}
+        src={CONES_IMG}
         alt="" aria-hidden="true"
         className="absolute left-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(80px, 10vw, 160px)", objectFit: "cover", objectPosition: "center", opacity: 0.35 }}
+        style={{ width: "clamp(90px, 12vw, 180px)", objectFit: "contain", objectPosition: "top left", opacity: 0.35 }}
       />
-      {/* Текстура дерева — правый край (зеркально) */}
+      {/* Еловые ветки — правый край (зеркально) */}
       <img
-        src={PINE_IMG}
+        src={CONES_IMG}
         alt="" aria-hidden="true"
         className="absolute right-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(80px, 10vw, 160px)", objectFit: "cover", objectPosition: "center", opacity: 0.35, transform: "scaleX(-1)" }}
+        style={{ width: "clamp(90px, 12vw, 180px)", objectFit: "contain", objectPosition: "top right", opacity: 0.35, transform: "scaleX(-1)" }}
       />
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center gap-4 mb-6">

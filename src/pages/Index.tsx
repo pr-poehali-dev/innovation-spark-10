@@ -25,7 +25,7 @@ const T: React.CSSProperties = {
 
 /* ═══ ИЗОБРАЖЕНИЯ ═══ */
 const HERO_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/78daf662-1715-4fa1-9aad-694aa6938a72.png"
-const MUSEUM_IMG = "https://thb.tildacdn.com/tild6163-3066-4032-b938-613632366637/-/resize/504x/12244161494517696_65.jpg"
+const MUSEUM_IMG = "https://thb.tildacdn.com/tild6163-3066-4032-b938-613632366637/12244161494517696_65.jpg"
 const GRASS_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/4ab69fff-d32b-400e-a103-26bb02bc7616.jpg"
 const PINE_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/files/fcdc1f46-b998-490d-91db-9263ae932557.jpg"
 const EX_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/604e79a7-ac28-4c70-99cb-0b5c903273f1.png"
@@ -107,10 +107,10 @@ const excursions = [
 ]
 
 const collections = [
-  { title: "Минералогический зал", subtitle: "Экспозиция минералов Ильменских гор", img: "https://thb.tildacdn.com/tild3439-6561-4534-a636-363036306266/-/resize/504x/photo.jpg", fb: "https://images.unsplash.com/photo-1567428485548-c499e4962571?w=300&h=200&fit=crop" },
-  { title: "Зал природы", subtitle: "Флора и фауна заповедника", img: "https://thb.tildacdn.com/tild3833-3035-4834-b430-373061363161/-/resize/504x/photo.jpg", fb: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=300&h=200&fit=crop" },
-  { title: "Ильменский зал", subtitle: "Уральский зал самоцветов", img: "https://thb.tildacdn.com/tild3964-6432-4534-b833-336233313932/-/resize/504x/photo.jpg", fb: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop" },
-  { title: "Геологический зал", subtitle: "Горные породы С.З. Ушков", img: "https://thb.tildacdn.com/tild3763-6635-4331-b539-363864323366/-/resize/504x/photo.jpg", fb: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=300&h=200&fit=crop" },
+  { title: "Минералогический зал", subtitle: "Экспозиция минералов Ильменских гор", img: "https://thb.tildacdn.com/tild3439-6561-4534-a636-363036306266/photo.jpg", fb: "https://images.unsplash.com/photo-1567428485548-c499e4962571?w=800&h=600&fit=crop" },
+  { title: "Зал природы", subtitle: "Флора и фауна заповедника", img: "https://thb.tildacdn.com/tild3833-3035-4834-b430-373061363161/photo.jpg", fb: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop" },
+  { title: "Ильменский зал", subtitle: "Уральский зал самоцветов", img: "https://thb.tildacdn.com/tild3964-6432-4534-b833-336233313932/photo.jpg", fb: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop" },
+  { title: "Геологический зал", subtitle: "Горные породы С.З. Ушков", img: "https://thb.tildacdn.com/tild3763-6635-4331-b539-363864323366/photo.jpg", fb: "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&h=600&fit=crop" },
 ]
 
 const announcements = [
@@ -219,7 +219,9 @@ const Index = () => {
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <img src={MUSEUM_IMG} alt="Музей заповедника"
             className="w-full md:w-72 h-52 object-cover rounded-lg flex-shrink-0"
-            onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=420&h=280&fit=crop" }} />
+            decoding="async"
+            style={{ imageRendering: "high-quality" } as React.CSSProperties}
+            onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=560&fit=crop" }} />
           <div>
             <p className="text-gray-600 leading-relaxed text-base font-light">
               Заповедник был учреждён 14 мая 1920 года по декрету В. И. Ленина. Первоначально он создавался как минералогический, а с 1 декабря 1935 года преобразован в комплексный — для сохранения и изучения не только минеральных богатств, но и природных ресурсов Ильменских гор и Южного Урала.
@@ -413,7 +415,8 @@ const Index = () => {
                   {/* Фото без скруглений, как в макете */}
                   <img src={col.img} alt={col.title}
                     className="w-full object-cover group-hover:opacity-90 transition-opacity"
-                    style={{ height: 140, display: "block" }}
+                    decoding="async"
+                    style={{ height: 160, display: "block", imageRendering: "high-quality" } as React.CSSProperties}
                     onError={(e) => { e.currentTarget.src = col.fb }} />
                   <p className="text-xs text-gray-700 leading-tight mt-2 font-light">{col.title}</p>
                   <p className="text-[10px] text-gray-400 leading-tight mt-0.5 font-light">{col.subtitle}</p>

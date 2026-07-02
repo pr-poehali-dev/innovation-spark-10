@@ -490,58 +490,55 @@ const Index = () => {
       </section>
 
       {/* ══════════════════════════════
-          КОНЕЦ СТРАНИЦЫ — по макету image(23):
-          белый фон, сосны по бокам,
-          фото луга снизу на всю ширину
+          КОНЕЦ СТРАНИЦЫ — точно по image(24)
       ══════════════════════════════ */}
-      <div className="relative overflow-hidden bg-white" style={{ minHeight: 420 }}>
+      <div className="relative bg-white overflow-hidden" style={{ height: "clamp(320px, 55vw, 520px)" }}>
 
-        {/* Сосна большая — слева */}
+        {/* Луг — нижние ~47%, без blendMode, чёткая фотография */}
+        <img src={GRASS_IMG} alt="" aria-hidden="true"
+          className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
+          style={{ height: "47%", objectFit: "cover", objectPosition: "center 30%" }} />
+
+        {/* Сосна большая — слева, касается верхнего и левого края */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
           className="absolute left-0 bottom-0 pointer-events-none select-none"
           style={{
-            height: "100%",
+            height: "95%",
             width: "auto",
-            maxWidth: "28%",
+            maxWidth: "30%",
             objectFit: "contain",
             objectPosition: "bottom left",
             mixBlendMode: "multiply",
           }} />
 
-        {/* Сосна справа — чуть меньше */}
+        {/* Сосна справа — чуть ниже, правее, тоньше */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 right-0 pointer-events-none select-none"
+          className="absolute bottom-0 pointer-events-none select-none"
           style={{
-            height: "82%",
+            right: "3%",
+            height: "78%",
             width: "auto",
-            maxWidth: "22%",
+            maxWidth: "21%",
             objectFit: "contain",
-            objectPosition: "bottom right",
+            objectPosition: "bottom center",
             mixBlendMode: "multiply",
           }} />
 
-        {/* Фото луга — нижняя полоса, на всю ширину */}
-        <img src={GRASS_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
-          style={{
-            height: "48%",
-            objectFit: "cover",
-            objectPosition: "center bottom",
-          }} />
-
-        {/* Надпись — по центру, крупно */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4"
-          style={{ paddingTop: "3rem", paddingBottom: "10rem" }}>
+        {/* Текст — верхняя белая зона, по центру, сдвинут правее от сосны */}
+        <div className="absolute inset-0 z-10 flex items-start justify-center"
+          style={{ paddingTop: "6%", paddingLeft: "28%", paddingRight: "20%", paddingBottom: "50%" }}>
           <h2 style={{
             fontFamily: RADIO,
             fontWeight: 900,
-            fontSize: "clamp(4rem, 12vw, 9.5rem)",
+            fontSize: "clamp(3rem, 10vw, 8rem)",
             color: G,
             textTransform: "uppercase",
             lineHeight: 1.0,
-            letterSpacing: "0.03em",
+            letterSpacing: "0.02em",
+            textAlign: "center",
+            whiteSpace: "nowrap",
           }}>
-            Ждем вас<br />в гости!
+            ЖДЕМ ВАС<br />В ГОСТИ!
           </h2>
         </div>
       </div>

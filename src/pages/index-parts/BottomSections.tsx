@@ -94,7 +94,7 @@ export const BottomSections = ({
         <h2 style={{
           fontFamily: RADIO,
           fontWeight: 900,
-          fontSize: "clamp(2.2rem, 8vw, 7rem)",
+          fontSize: "clamp(1.4rem, 4.5vw, 3.8rem)",
           color: "rgb(82, 102, 102)",
           textTransform: "uppercase",
           lineHeight: 1.0,

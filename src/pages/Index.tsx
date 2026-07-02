@@ -219,11 +219,6 @@ const Index = () => {
       ══════════════════════════════ */}
       <section className="relative py-14 px-6 md:px-16 max-w-6xl mx-auto overflow-visible">
 
-        {/* Агат — справа вверху, как в макете */}
-        <img src={AGATE_IMG} alt="" aria-hidden="true"
-          className="absolute pointer-events-none select-none"
-          style={{ top: "-40px", right: "-40px", width: "clamp(260px, 30vw, 420px)", opacity: 0.82 }} />
-
         <h2 style={T} className="mb-8">О заповеднике</h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <img src={MUSEUM_IMG} alt="Музей заповедника"
@@ -247,7 +242,7 @@ const Index = () => {
         <div className="relative mt-2">
           <img src={BIRD_IMG} alt="" aria-hidden="true"
             className="pointer-events-none select-none"
-            style={{ width: "clamp(200px, 24vw, 340px)", opacity: 0.78 }} />
+            style={{ width: "clamp(200px, 24vw, 340px)", opacity: 0.32 }} />
         </div>
       </section>
 
@@ -269,10 +264,10 @@ const Index = () => {
           className="absolute top-0 right-0 h-full pointer-events-none select-none"
           style={{ width: "52%", objectFit: "cover", objectPosition: "center bottom", opacity: 0.55 }} />
 
-        {/* Агат поверх фото — правый нижний угол, как в макете */}
+        {/* Агат поверх фото — правый нижний угол, крупный и прозрачный */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none z-10"
-          style={{ right: "2%", bottom: "0", width: "clamp(220px, 26vw, 360px)", opacity: 0.7 }} />
+          style={{ right: "1%", bottom: "0", width: "clamp(320px, 38vw, 560px)", opacity: 0.28 }} />
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
@@ -343,12 +338,12 @@ const Index = () => {
           Вертикальный заголовок по
           высоте сетки, сетка 3×2
       ══════════════════════════════ */}
-      {/* По макету: рамка вокруг всего блока, вертикальный заголовок, шишки справа вверху */}
+      {/* По макету: рамка вокруг всего блока, вертикальный заголовок, шишки справа вдоль блока */}
       <section id="excursions" className="relative py-10 px-6 md:px-16">
-        {/* Шишки — правый верхний угол, как в макете */}
+        {/* Шишки — правый край, растянуты по всей высоте блока */}
         <img src={CONES_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none"
-          style={{ right: "-10px", top: "-90px", width: "clamp(200px, 25vw, 360px)", opacity: 0.75 }} />
+          style={{ right: "-20px", top: "0", bottom: "0", height: "100%", width: "auto", maxWidth: "22vw", objectFit: "contain", objectPosition: "top right", opacity: 0.3 }} />
 
         <div className="max-w-6xl mx-auto">
           {/* Обёртка с рамкой — как в макете */}

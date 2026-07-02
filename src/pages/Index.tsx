@@ -419,7 +419,8 @@ const Index = () => {
                       backgroundSize: "300% 200%",
                       backgroundPosition: ex.pos,
                     }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-black/45" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                   <div className="absolute inset-0 p-3 flex flex-col justify-between">
                     <div className="flex justify-between items-start">
                       <p className="text-white font-semibold text-sm leading-tight max-w-[82%]">{ex.title}</p>

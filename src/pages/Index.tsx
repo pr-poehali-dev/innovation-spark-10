@@ -265,85 +265,76 @@ const Index = () => {
           - цены справа
       ══════════════════════════════ */}
       <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-14">
 
-          <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
+        {/* Фото степи — фон правой половины */}
+        <img
+          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/539fac6e-12fa-4bdd-868c-263f28c87344.jpg"
+          alt="" aria-hidden="true"
+          className="absolute top-0 right-0 h-full pointer-events-none select-none"
+          style={{ width: "50%", objectFit: "cover", objectPosition: "center" }}
+          decoding="async"
+        />
+
+        {/* Агат — правый нижний угол поверх фото */}
+        <img src={AGATE_IMG} alt="" aria-hidden="true"
+          className="absolute pointer-events-none select-none z-10"
+          style={{ right: 0, bottom: 0, width: "clamp(200px, 28vw, 380px)", opacity: 0.65 }} />
+
+        <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
+
+          <h2 className="mb-8" style={{ ...T, color: "#fff" }}>
             Информация<br />для посетителей
           </h2>
 
-          {/* Две колонки: левая — карточки, правая — фото степи */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          {/* Три колонки: контакты | часы | цены — в левых 55% */}
+          <div className="grid gap-4" style={{ maxWidth: "55%" }}>
 
-            {/* Левая колонка — тёмные карточки */}
-            <div className="space-y-3">
-              {/* Контакты */}
-              <div className="rounded-xl p-5 text-sm text-white"
-                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
-                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
-                  Контакты
-                </p>
-                <p className="mb-1 font-light">+7 (351) 59-82-72 — основной</p>
-                <p className="font-light">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
-                <p className="mt-2" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
-                <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
-              </div>
-
-              {/* Часы работы */}
-              <div className="rounded-xl p-5 text-white"
-                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-4"
-                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
-                  Часы работы:
-                </p>
-                <div className="flex gap-8 items-start">
-                  <div>
-                    <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Пн — Пт</p>
-                    <p className="font-black leading-none" style={{ fontSize: "2.8rem" }}>09:00</p>
-                    <p className="text-white/45 text-xs mt-1">— 17:00</p>
-                  </div>
-                  <div className="w-px self-stretch bg-white/15 mx-1" />
-                  <div>
-                    <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Сб — Вс</p>
-                    <p className="font-black leading-none" style={{ fontSize: "2.8rem" }}>10:00</p>
-                    <p className="text-white/45 text-xs mt-1">— 16:00</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Цены */}
-              <div className="rounded-xl p-5 text-sm text-white font-light"
-                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
-                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
-                  Стоимость посещения
-                </p>
-                <p className="mb-1"><span className="font-semibold">Взрослый</span> — 200 ₽</p>
-                <p className="mb-1"><span className="font-semibold">Льготный</span> (дети, студенты, пенсионеры) — 100 ₽</p>
-                <p className="mb-1"><span className="font-semibold">Семейный</span> (2+2) — 450 ₽</p>
-                <p className="mt-2 text-white/50 text-[10px] uppercase tracking-wide">Экскурсии</p>
-                <p>Малые группы (1–7 чел.) — 400 ₽ &nbsp;|&nbsp; Группы 8–25 чел. — 1 000 ₽</p>
-                <p className="mt-1 text-white/50 text-[10px] uppercase tracking-wide">Обзорные</p>
-                <p>1–7 чел. — 1 400 ₽ &nbsp;|&nbsp; 25+ чел. — 2 000 ₽ &nbsp;|&nbsp; Тематические — 2 500 ₽</p>
-              </div>
+            {/* Контакты */}
+            <div className="p-4 text-sm text-white"
+              style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
+              <p className="text-[10px] uppercase tracking-widest text-white/40 mb-2"
+                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Контакты</p>
+              <p className="mb-1 font-light">+7 (351) 59-82-72 — основной</p>
+              <p className="font-light">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
+              <p className="mt-2" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
+              <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
             </div>
 
-            {/* Правая колонка — фото степи на всю высоту + агат поверх */}
-            <div className="relative min-h-[400px] overflow-hidden">
-              <img
-                src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/539fac6e-12fa-4bdd-868c-263f28c87344.jpg"
-                alt="Степь заповедника"
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{ objectPosition: "center center" }}
-                decoding="async"
-              />
-              {/* Агат поверх фото — правый нижний угол */}
-              <img src={AGATE_IMG} alt="" aria-hidden="true"
-                className="absolute bottom-0 right-0 pointer-events-none select-none"
-                style={{ width: "clamp(180px, 55%, 320px)", opacity: 0.7 }} />
+            {/* Часы работы */}
+            <div className="p-4 text-white"
+              style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
+              <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
+                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Часы работы:</p>
+              <div className="flex gap-8 items-start">
+                <div>
+                  <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Пн — Пт</p>
+                  <p className="font-black leading-none" style={{ fontSize: "2.6rem" }}>09:00</p>
+                  <p className="text-white/45 text-xs mt-1">до 17:00</p>
+                </div>
+                <div className="w-px self-stretch bg-white/15" />
+                <div>
+                  <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Сб — Вс</p>
+                  <p className="font-black leading-none" style={{ fontSize: "2.6rem" }}>10:00</p>
+                  <p className="text-white/45 text-xs mt-1">до 16:00</p>
+                </div>
+              </div>
             </div>
 
           </div>
+
+          {/* Цены — справа от карточек, поверх фото, текстом */}
+          <div className="absolute top-14 text-white text-sm font-light leading-relaxed"
+            style={{ right: "calc(50% + 2rem)", left: "calc(55% + 1.5rem + 3rem)", display: "none" }} />
+
+          {/* Цены — отдельная строка под карточками */}
+          <div className="mt-4 text-white text-sm font-light leading-relaxed" style={{ maxWidth: "55%" }}>
+            <p><span className="font-semibold">Входной билет для взрослых</span> — 200 ₽</p>
+            <p><span className="font-semibold">Льготный</span> (дети, студенты, пенсионеры) — 100 ₽</p>
+            <p><span className="font-semibold">Семейный</span> (2+2) — 450 ₽</p>
+            <p className="mt-2 text-white/50 text-[10px] uppercase tracking-wide">Экскурсии для малых групп (1–7 чел.) — 400 ₽ | Группы 8–25 чел. — 1 000 ₽</p>
+            <p className="text-white/50 text-[10px] uppercase tracking-wide">Обзорные: 1–7 чел. — 1 400 ₽ | 25+ — 2 000 ₽ | Тематические — 2 500 ₽</p>
+          </div>
+
         </div>
       </section>
 

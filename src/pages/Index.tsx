@@ -232,7 +232,7 @@ const Index = () => {
             style={{ imageRendering: "high-quality" } as React.CSSProperties}
             onError={(e) => { e.currentTarget.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=560&fit=crop" }} />
           <div>
-            <p className="text-gray-600 leading-relaxed text-base font-light">
+            <p className="text-gray-600 leading-relaxed font-light" style={{ fontSize: "1.1rem", lineHeight: 1.7 }}>
               Заповедник был учреждён 14 мая 1920 года по декрету В. И. Ленина. Первоначально он создавался как минералогический, а с 1 декабря 1935 года преобразован в комплексный — для сохранения и изучения не только минеральных богатств, но и природных ресурсов Ильменских гор и Южного Урала.
             </p>
             <a href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
@@ -503,13 +503,31 @@ const Index = () => {
         </div>
       </section>
 
-      {/* КОНЕЦ СТРАНИЦЫ — картинка */}
-      <img
-        src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/c5ad0bad-64a3-4e3a-922c-4f66039ec385.png"
-        alt="Ждём вас в гости"
-        className="w-full block"
-        style={{ objectFit: "cover" }}
-      />
+      {/* КОНЕЦ СТРАНИЦЫ — картинка с надписью */}
+      <div className="relative">
+        <img
+          src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/c5ad0bad-64a3-4e3a-922c-4f66039ec385.png"
+          alt="Ждём вас в гости"
+          className="w-full block"
+          style={{ objectFit: "cover" }}
+        />
+        {/* Надпись поверх — в белой зоне между соснами */}
+        <div className="absolute inset-0 flex items-start justify-center"
+          style={{ paddingTop: "5%", paddingLeft: "25%", paddingRight: "20%" }}>
+          <h2 style={{
+            fontFamily: RADIO,
+            fontWeight: 900,
+            fontSize: "clamp(2.2rem, 8vw, 7rem)",
+            color: G,
+            textTransform: "uppercase",
+            lineHeight: 1.0,
+            letterSpacing: "0.03em",
+            textAlign: "center",
+          }}>
+            Ждём вас<br />в гости!
+          </h2>
+        </div>
+      </div>
 
       {/* ══════════════════════════════
           ФУТЕР — тёмный, по макету

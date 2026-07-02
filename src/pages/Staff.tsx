@@ -76,23 +76,24 @@ const Staff = () => {
       </div>
 
       {/* Хранители фондов */}
-      <section className="bg-[#8b9a3a] py-16 px-6">
+      <section className="bg-[#8b9a3a] py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-10">
+          <div className="flex flex-col md:flex-row items-center md:items-end gap-12">
             {/* Фото */}
-            <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+            <div className="flex gap-6 flex-wrap justify-center md:justify-start">
               {keepers.map((p, i) => (
                 <div key={i} className="flex flex-col items-center">
-                  <div className="w-28 h-28 border-2 border-white/60 overflow-hidden">
+                  <div className="w-40 h-40 border-2 border-white/60 overflow-hidden">
                     <img src={p.photo} alt={p.name} className="w-full h-full object-cover grayscale" />
                   </div>
-                  <p className="text-white text-xs mt-2 text-center whitespace-pre-line leading-tight">{p.name}</p>
+                  <p className="text-white text-sm mt-3 text-center whitespace-pre-line leading-snug font-light">{p.name}</p>
                 </div>
               ))}
             </div>
             {/* Заголовок */}
             <div className="md:ml-auto">
-              <h2 className="text-5xl md:text-7xl font-black text-white uppercase leading-tight text-right">
+              <h2 className="font-black text-white uppercase leading-tight text-right"
+                style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>
                 Хранители<br />фондов
               </h2>
             </div>
@@ -101,23 +102,24 @@ const Staff = () => {
       </section>
 
       {/* Экскурсоводы */}
-      <section className="bg-white py-16 px-6">
+      <section className="bg-white py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-end gap-10">
+          <div className="flex flex-col md:flex-row items-center md:items-end gap-12">
             {/* Заголовок слева */}
             <div className="md:mr-auto">
-              <h2 className="text-5xl md:text-7xl font-black text-black uppercase leading-tight">
+              <h2 className="font-black text-black uppercase leading-tight"
+                style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>
                 Экскурсо<br />воды
               </h2>
             </div>
             {/* Фото */}
-            <div className="flex gap-4 flex-wrap justify-center md:justify-end">
+            <div className="flex gap-6 flex-wrap justify-center md:justify-end">
               {guides.map((p, i) => (
                 <div key={i} className="flex flex-col items-center">
-                  <div className="w-28 h-28 border-2 border-gray-300 overflow-hidden">
+                  <div className="w-40 h-40 border-2 border-gray-300 overflow-hidden">
                     <img src={p.photo} alt={p.name} className="w-full h-full object-cover grayscale" />
                   </div>
-                  <p className="text-black text-xs mt-2 text-center whitespace-pre-line leading-tight">{p.name}</p>
+                  <p className="text-black text-sm mt-3 text-center whitespace-pre-line leading-snug font-light">{p.name}</p>
                 </div>
               ))}
             </div>
@@ -126,24 +128,25 @@ const Staff = () => {
       </section>
 
       {/* Научные сотрудники */}
-      <section className="bg-white py-16 px-6 border-t border-gray-100">
+      <section className="bg-white py-20 px-6 border-t border-gray-100">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
             {/* Фото с подписями */}
-            <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+            <div className="flex gap-6 flex-wrap justify-center md:justify-start">
               {scientists.map((p, i) => (
-                <div key={i} className="flex flex-col items-start max-w-[140px]">
-                  <div className="w-28 h-36 border-2 border-gray-300 overflow-hidden">
+                <div key={i} className="flex flex-col items-start" style={{ maxWidth: 180 }}>
+                  <div className="w-40 h-48 border-2 border-gray-300 overflow-hidden">
                     <img src={p.photo} alt={p.name} className="w-full h-full object-cover grayscale" />
                   </div>
-                  <p className="text-black text-xs mt-2 font-semibold whitespace-pre-line leading-tight">{p.name}</p>
-                  <p className="text-gray-500 text-xs mt-1 leading-tight">{p.role}</p>
+                  <p className="text-black text-sm mt-3 font-semibold whitespace-pre-line leading-snug">{p.name}</p>
+                  <p className="text-gray-500 text-sm mt-1 leading-snug">{p.role}</p>
                 </div>
               ))}
             </div>
             {/* Заголовок */}
             <div className="md:ml-4">
-              <h2 className="text-5xl md:text-6xl font-black text-black uppercase leading-tight">
+              <h2 className="font-black text-black uppercase leading-tight"
+                style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}>
                 Научные<br />сотрудники
               </h2>
             </div>

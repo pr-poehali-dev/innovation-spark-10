@@ -540,7 +540,7 @@ const Index = () => {
             fontFamily: RADIO,
             fontWeight: 900,
             fontSize: "clamp(2.2rem, 8vw, 7rem)",
-            color: G,
+            color: "rgb(82, 102, 102)",
             textTransform: "uppercase",
             lineHeight: 1.0,
             letterSpacing: "0.03em",

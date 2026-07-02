@@ -264,10 +264,10 @@ const Index = () => {
           className="absolute top-0 right-0 h-full pointer-events-none select-none"
           style={{ width: "52%", objectFit: "cover", objectPosition: "center bottom", opacity: 0.55 }} />
 
-        {/* Агат поверх фото — правый нижний угол, крупный и прозрачный */}
+        {/* Агат поверх фото — правый нижний угол */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none z-10"
-          style={{ right: "1%", bottom: "0", width: "clamp(320px, 38vw, 560px)", opacity: 0.28 }} />
+          style={{ right: "1%", bottom: "0", width: "clamp(320px, 38vw, 560px)", opacity: 0.65 }} />
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
@@ -397,36 +397,40 @@ const Index = () => {
       </section>
 
       {/* ══════════════════════════════
-          КОЛЛЕКЦИИ
+          КОЛЛЕКЦИИ — точно по макету:
+          зелёный фон, заголовок крупный
+          левее белого блока, белый блок
+          со смещением вправо-вниз
       ══════════════════════════════ */}
-      {/* По макету: зелёный фон снизу, белый блок с крупным заголовком сверху, фото без скруглений */}
-      <section id="collections" className="px-6 md:px-16 pb-10" style={{ backgroundColor: G }}>
-        <div className="max-w-6xl mx-auto">
-          {/* Белый блок-карточка */}
-          <div className="bg-white" style={{ padding: "28px 28px 24px" }}>
-            {/* Заголовок крупный, строчные буквы, как в макете */}
-            <h2 className="mb-8" style={{
-              fontFamily: KT,
-              fontWeight: 300,
-              fontSize: "clamp(2.4rem, 6vw, 5rem)",
-              lineHeight: 1.0,
-              letterSpacing: "0.04em",
-              color: "#2a2a2a",
-              textTransform: "lowercase",
-            }}>коллекции</h2>
+      <section id="collections" className="relative pt-0 pb-10 px-0" style={{ backgroundColor: G }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-16 relative">
 
-            {/* Сетка фото */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          {/* Заголовок — поверх зелёного фона, выступает над белым блоком */}
+          <h2 style={{
+            fontFamily: KT,
+            fontWeight: 300,
+            fontSize: "clamp(2.8rem, 7vw, 6rem)",
+            lineHeight: 1.0,
+            letterSpacing: "0.04em",
+            color: "#fff",
+            textTransform: "lowercase",
+            paddingTop: "2rem",
+            paddingBottom: "1rem",
+            display: "block",
+          }}>коллекции</h2>
+
+          {/* Белый блок — немного уже, со смещением как в макете */}
+          <div className="bg-white" style={{ padding: "28px 28px 32px", marginLeft: "0", marginRight: "0" }}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {collections.map((col, i) => (
                 <a key={i} href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
                   className="group block">
-                  {/* Фото без скруглений, как в макете */}
                   <img src={col.img} alt={col.title}
                     className="w-full object-cover group-hover:opacity-90 transition-opacity"
                     decoding="async"
-                    style={{ height: 160, display: "block", imageRendering: "high-quality" } as React.CSSProperties}
+                    style={{ height: 150, display: "block" } as React.CSSProperties}
                     onError={(e) => { e.currentTarget.src = col.fb }} />
-                  <p className="text-xs text-gray-700 leading-tight mt-2 font-light">{col.title}</p>
+                  <p className="text-xs text-gray-700 leading-snug mt-2 font-light">{col.title}</p>
                   <p className="text-[10px] text-gray-400 leading-tight mt-0.5 font-light">{col.subtitle}</p>
                   <span className="inline-block mt-3 px-5 py-1.5 rounded-full text-white text-xs cursor-pointer font-light"
                     style={{ backgroundColor: G }}>подробнее</span>

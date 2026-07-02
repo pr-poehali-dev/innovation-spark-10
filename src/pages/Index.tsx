@@ -545,7 +545,9 @@ const Index = () => {
             lineHeight: 1.0,
             letterSpacing: "0.03em",
             textAlign: "center",
-          }}>
+            WebkitTextStroke: "2px rgb(82, 102, 102)",
+            paintOrder: "stroke fill",
+          } as React.CSSProperties}>
             Ждём вас<br />в гости!
           </h2>
         </div>

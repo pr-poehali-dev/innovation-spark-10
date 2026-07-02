@@ -52,20 +52,20 @@ export const BottomSections = ({
       </div>
     </section>
 
-    <section className="relative py-14 px-6 md:px-16 overflow-hidden">
+    <section className="relative py-14 px-6 md:px-16" style={{ overflow: "visible" }}>
       {/* Еловые ветки — левый край */}
       <img
         src={CONES_IMG}
         alt="" aria-hidden="true"
-        className="absolute left-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(200px, 26vw, 400px)", objectFit: "contain", objectPosition: "top left", opacity: 0.6 }}
+        className="absolute pointer-events-none select-none"
+        style={{ left: 0, top: 0, bottom: 0, height: "100%", width: "auto", maxWidth: "38vw", objectFit: "contain", objectPosition: "top left", opacity: 0.75 }}
       />
       {/* Еловые ветки — правый край (зеркально) */}
       <img
         src={CONES_IMG}
         alt="" aria-hidden="true"
-        className="absolute right-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(200px, 26vw, 400px)", objectFit: "contain", objectPosition: "top right", opacity: 0.6, transform: "scaleX(-1)" }}
+        className="absolute pointer-events-none select-none"
+        style={{ right: 0, top: 0, bottom: 0, height: "100%", width: "auto", maxWidth: "38vw", objectFit: "contain", objectPosition: "top right", opacity: 0.75, transform: "scaleX(-1)" }}
       />
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center gap-4 mb-6">

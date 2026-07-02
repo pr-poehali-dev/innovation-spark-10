@@ -32,7 +32,7 @@ export const VisitorsSection = () => (
   <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
     <img src={AGATE_IMG} alt="" aria-hidden="true"
       className="absolute pointer-events-none select-none z-10"
-      style={{ right: "-40px", bottom: 0, width: "clamp(750px, 88vw, 1200px)", opacity: 0.9 }} />
+      style={{ right: 0, bottom: 0, width: "clamp(500px, 55vw, 800px)", opacity: 1, objectFit: "contain", objectPosition: "bottom right" }} />
 
     <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
       <h2 className="mb-8" style={{ ...T, color: "#fff" }}>

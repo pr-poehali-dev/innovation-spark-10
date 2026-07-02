@@ -278,7 +278,7 @@ const Index = () => {
         {/* Агат — правый нижний угол поверх фото */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"
           className="absolute pointer-events-none select-none z-10"
-          style={{ right: 0, bottom: 0, width: "clamp(200px, 28vw, 380px)", opacity: 0.65 }} />
+          style={{ right: 0, bottom: 0, width: "clamp(320px, 42vw, 560px)", opacity: 0.75 }} />
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
 

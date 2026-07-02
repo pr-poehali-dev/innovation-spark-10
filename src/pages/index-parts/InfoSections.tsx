@@ -39,43 +39,43 @@ export const VisitorsSection = () => (
         Информация<br />для посетителей
       </h2>
 
-      <div className="flex gap-5 items-start" style={{ maxWidth: "58%" }}>
-        <div className="flex flex-col gap-4 flex-shrink-0" style={{ minWidth: 260 }}>
-          <div className="p-5 text-white"
-            style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
-            <p className="text-xs uppercase tracking-widest text-white/40 mb-3"
+      <div className="flex gap-6 items-start" style={{ maxWidth: "70%" }}>
+        <div className="flex flex-col gap-5 flex-shrink-0" style={{ minWidth: 300 }}>
+          <div className="p-6 text-white"
+            style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 10 }}>
+            <p className="text-sm uppercase tracking-widest text-white/40 mb-3"
               style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Контакты</p>
-            <p className="mb-1.5 font-light text-base">+7 (351) 59-82-72 — основной</p>
-            <p className="font-light text-base">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
-            <p className="mt-3 text-base" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
-            <p className="text-base" style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
+            <p className="mb-2 font-light text-lg">+7 (351) 59-82-72 — основной</p>
+            <p className="font-light text-lg">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
+            <p className="mt-3 text-lg" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
+            <p className="text-lg" style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
           </div>
 
-          <div className="p-5 text-white"
-            style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
-            <p className="text-xs uppercase tracking-widest text-white/40 mb-3"
+          <div className="p-6 text-white"
+            style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 10 }}>
+            <p className="text-sm uppercase tracking-widest text-white/40 mb-4"
               style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Часы работы:</p>
-            <div className="flex gap-8 items-start">
+            <div className="flex gap-10 items-start">
               <div>
-                <p className="text-white/45 text-xs uppercase tracking-wide mb-1">Пн — Пт</p>
-                <p className="font-black leading-none" style={{ fontSize: "3rem" }}>09:00</p>
-                <p className="text-white/45 text-sm mt-1">до 17:00</p>
+                <p className="text-white/45 text-sm uppercase tracking-wide mb-1">Пн — Пт</p>
+                <p className="font-black leading-none" style={{ fontSize: "3.6rem" }}>09:00</p>
+                <p className="text-white/45 text-base mt-1">до 17:00</p>
               </div>
               <div className="w-px self-stretch bg-white/15" />
               <div>
-                <p className="text-white/45 text-xs uppercase tracking-wide mb-1">Сб — Вс</p>
-                <p className="font-black leading-none" style={{ fontSize: "3rem" }}>10:00</p>
-                <p className="text-white/45 text-sm mt-1">до 16:00</p>
+                <p className="text-white/45 text-sm uppercase tracking-wide mb-1">Сб — Вс</p>
+                <p className="font-black leading-none" style={{ fontSize: "3.6rem" }}>10:00</p>
+                <p className="text-white/45 text-base mt-1">до 16:00</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="p-5 text-white flex-1"
-          style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8, fontSize: "0.95rem" }}>
-          <p className="text-xs uppercase tracking-widest text-white/40 mb-3"
+        <div className="p-6 text-white flex-1"
+          style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 10, fontSize: "1.05rem" }}>
+          <p className="text-sm uppercase tracking-widest text-white/40 mb-4"
             style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Стоимость посещения</p>
-          <div className="space-y-2 font-light">
+          <div className="space-y-3 font-light">
             <div className="flex justify-between gap-4">
               <span>Входной билет для взрослых</span>
               <span className="font-semibold whitespace-nowrap">200 ₽</span>
@@ -90,9 +90,9 @@ export const VisitorsSection = () => (
             </div>
           </div>
           <div className="w-full h-px bg-white/10 my-4" />
-          <p className="text-xs uppercase tracking-widest text-white/40 mb-2"
+          <p className="text-sm uppercase tracking-widest text-white/40 mb-3"
             style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Экскурсии для групп от 6 до 25 человек</p>
-          <div className="space-y-2 font-light">
+          <div className="space-y-3 font-light">
             <div className="flex justify-between gap-4">
               <span>Обзорная экскурсия <span className="text-white/50 text-xs">(до 7 чел.)</span></span>
               <span className="font-semibold whitespace-nowrap">1 000 ₽</span>

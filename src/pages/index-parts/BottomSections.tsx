@@ -58,14 +58,14 @@ export const BottomSections = ({
         src={CONES_IMG}
         alt="" aria-hidden="true"
         className="absolute left-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(140px, 18vw, 280px)", objectFit: "contain", objectPosition: "top left", opacity: 0.5 }}
+        style={{ width: "clamp(200px, 26vw, 400px)", objectFit: "contain", objectPosition: "top left", opacity: 0.6 }}
       />
       {/* Еловые ветки — правый край (зеркально) */}
       <img
         src={CONES_IMG}
         alt="" aria-hidden="true"
         className="absolute right-0 top-0 h-full pointer-events-none select-none"
-        style={{ width: "clamp(140px, 18vw, 280px)", objectFit: "contain", objectPosition: "top right", opacity: 0.5, transform: "scaleX(-1)" }}
+        style={{ width: "clamp(200px, 26vw, 400px)", objectFit: "contain", objectPosition: "top right", opacity: 0.6, transform: "scaleX(-1)" }}
       />
       <div className="max-w-6xl mx-auto relative">
         <div className="flex items-center gap-4 mb-6">

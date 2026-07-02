@@ -258,28 +258,18 @@ const Index = () => {
           - выделенный блок часов работы
           - цены справа
       ══════════════════════════════ */}
-      {/* По макету: зелёный фон, слева тёмные блоки, справа — фото луга поверх фона */}
       <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-16 py-14">
 
-        {/* Новое фото степи — справа, на всю высоту */}
-        <img src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/df5c29ee-04fd-4d06-af74-f475920cbe9a.jpg" alt="" aria-hidden="true"
-          className="absolute top-0 right-0 h-full pointer-events-none select-none"
-          style={{ width: "52%", objectFit: "cover", objectPosition: "center center", opacity: 0.75 }} />
-
-        {/* Агат поверх фото — правый нижний угол */}
-        <img src={AGATE_IMG} alt="" aria-hidden="true"
-          className="absolute pointer-events-none select-none z-10"
-          style={{ right: "1%", bottom: "0", width: "clamp(320px, 38vw, 560px)", opacity: 0.65 }} />
-
-        <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
             Информация<br />для посетителей
           </h2>
 
-          {/* Левая колонка занимает ~45% ширины, правая — фото */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start" style={{ maxWidth: "58%" }}>
-            {/* Левый столбец */}
-            <div className="space-y-3" style={{ gridColumn: "1 / -1" }}>
+          {/* Две колонки: левая — карточки, правая — фото степи */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+
+            {/* Левая колонка — тёмные карточки */}
+            <div className="space-y-3">
               {/* Контакты */}
               <div className="rounded-xl p-5 text-sm text-white"
                 style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
@@ -293,7 +283,7 @@ const Index = () => {
                 <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
               </div>
 
-              {/* ЧАСЫ РАБОТЫ */}
+              {/* Часы работы */}
               <div className="rounded-xl p-5 text-white"
                 style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
                 <p className="text-[10px] uppercase tracking-widest text-white/40 mb-4"
@@ -331,6 +321,22 @@ const Index = () => {
                 <p>1–7 чел. — 1 400 ₽ &nbsp;|&nbsp; 25+ чел. — 2 000 ₽ &nbsp;|&nbsp; Тематические — 2 500 ₽</p>
               </div>
             </div>
+
+            {/* Правая колонка — фото степи на всю высоту + агат поверх */}
+            <div className="relative min-h-[400px] overflow-hidden">
+              <img
+                src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/539fac6e-12fa-4bdd-868c-263f28c87344.jpg"
+                alt="Степь заповедника"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition: "center center" }}
+                decoding="async"
+              />
+              {/* Агат поверх фото — правый нижний угол */}
+              <img src={AGATE_IMG} alt="" aria-hidden="true"
+                className="absolute bottom-0 right-0 pointer-events-none select-none"
+                style={{ width: "clamp(180px, 55%, 320px)", opacity: 0.7 }} />
+            </div>
+
           </div>
         </div>
       </section>

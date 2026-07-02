@@ -505,7 +505,7 @@ const Index = () => {
 
       {/* КОНЕЦ СТРАНИЦЫ — картинка */}
       <img
-        src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/53014c81-946f-454c-a0be-32cd2c3b9faf.png"
+        src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/c5ad0bad-64a3-4e3a-922c-4f66039ec385.png"
         alt="Ждём вас в гости"
         className="w-full block"
         style={{ objectFit: "cover" }}

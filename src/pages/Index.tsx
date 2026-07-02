@@ -259,10 +259,10 @@ const Index = () => {
       {/* По макету: зелёный фон, слева тёмные блоки, справа — фото луга поверх фона */}
       <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
 
-        {/* Фото луга — справа, видимое, как в макете */}
-        <img src={GRASS_IMG} alt="" aria-hidden="true"
+        {/* Новое фото степи — справа, на всю высоту */}
+        <img src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/df5c29ee-04fd-4d06-af74-f475920cbe9a.jpg" alt="" aria-hidden="true"
           className="absolute top-0 right-0 h-full pointer-events-none select-none"
-          style={{ width: "52%", objectFit: "cover", objectPosition: "center bottom", opacity: 0.55 }} />
+          style={{ width: "52%", objectFit: "cover", objectPosition: "center center", opacity: 0.75 }} />
 
         {/* Агат поверх фото — правый нижний угол */}
         <img src={AGATE_IMG} alt="" aria-hidden="true"

@@ -473,10 +473,10 @@ const Index = () => {
                     decoding="async"
                     style={{ height: 150, display: "block" } as React.CSSProperties}
                     onError={(e) => { e.currentTarget.src = col.fb }} />
-                  <p className="text-xs text-gray-700 leading-snug mt-2 font-light">{col.title}</p>
-                  <p className="text-[10px] text-gray-400 leading-tight mt-0.5 font-light">{col.subtitle}</p>
+                  <p className="text-xs text-gray-700 leading-snug mt-2 font-light" style={{ fontFamily: KT }}>{col.title}</p>
+                  <p className="text-[10px] text-gray-400 leading-tight mt-0.5 font-light" style={{ fontFamily: KT }}>{col.subtitle}</p>
                   <span className="inline-block mt-3 px-5 py-1.5 rounded-full text-white text-xs cursor-pointer font-light"
-                    style={{ backgroundColor: G }}>подробнее</span>
+                    style={{ backgroundColor: G, fontFamily: KT }}>подробнее</span>
                 </a>
               ))}
             </div>

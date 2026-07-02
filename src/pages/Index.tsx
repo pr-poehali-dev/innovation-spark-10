@@ -489,59 +489,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════
-          КОНЕЦ СТРАНИЦЫ — точно по image(24)
-      ══════════════════════════════ */}
-      <div className="relative bg-white overflow-hidden" style={{ height: "clamp(320px, 55vw, 520px)" }}>
-
-        {/* Луг — нижние ~47%, без blendMode, чёткая фотография */}
-        <img src={GRASS_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
-          style={{ height: "47%", objectFit: "cover", objectPosition: "center 30%" }} />
-
-        {/* Сосна большая — слева, касается верхнего и левого края */}
-        <img src={PINE_IMG} alt="" aria-hidden="true"
-          className="absolute left-0 bottom-0 pointer-events-none select-none"
-          style={{
-            height: "95%",
-            width: "auto",
-            maxWidth: "30%",
-            objectFit: "contain",
-            objectPosition: "bottom left",
-            mixBlendMode: "multiply",
-          }} />
-
-        {/* Сосна справа — чуть ниже, правее, тоньше */}
-        <img src={PINE_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 pointer-events-none select-none"
-          style={{
-            right: "3%",
-            height: "78%",
-            width: "auto",
-            maxWidth: "21%",
-            objectFit: "contain",
-            objectPosition: "bottom center",
-            mixBlendMode: "multiply",
-          }} />
-
-        {/* Текст — верхняя белая зона, по центру, сдвинут правее от сосны */}
-        <div className="absolute inset-0 z-10 flex items-start justify-center"
-          style={{ paddingTop: "6%", paddingLeft: "28%", paddingRight: "20%", paddingBottom: "50%" }}>
-          <h2 style={{
-            fontFamily: RADIO,
-            fontWeight: 900,
-            fontSize: "clamp(3rem, 10vw, 8rem)",
-            color: G,
-            textTransform: "uppercase",
-            lineHeight: 1.0,
-            letterSpacing: "0.02em",
-            textAlign: "center",
-            whiteSpace: "nowrap",
-          }}>
-            ЖДЕМ ВАС<br />В ГОСТИ!
-          </h2>
-        </div>
-      </div>
+      {/* КОНЕЦ СТРАНИЦЫ — картинка */}
+      <img
+        src="https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/53014c81-946f-454c-a0be-32cd2c3b9faf.png"
+        alt="Ждём вас в гости"
+        className="w-full block"
+        style={{ objectFit: "cover" }}
+      />
 
       {/* ══════════════════════════════
           ФУТЕР — тёмный, по макету

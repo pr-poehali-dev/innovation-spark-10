@@ -587,19 +587,19 @@ const Index = () => {
       {/* ══════════════════════════════
           ФУТЕР — тёмный, по макету
       ══════════════════════════════ */}
-      <footer className="text-white py-8 px-8" style={{ backgroundColor: "#2d3022" }}>
+      <footer className="text-white py-8 px-8" style={{ backgroundColor: "#2d3022", fontFamily: KT }}>
         <div className="max-w-6xl mx-auto">
-          <p className="font-bold mb-4" style={{ color: "#fff", fontSize: "0.85rem", letterSpacing: "0.05em" }}>
+          <p className="font-bold mb-4" style={{ color: "#fff", fontSize: "0.85rem", letterSpacing: "0.05em", fontFamily: KT }}>
             • КОНТАКТЫ
           </p>
-          <p className="mb-1 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem" }}>
+          <p className="mb-1 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", fontFamily: KT }}>
             + 7 (351) 59-82-72 — основной
           </p>
-          <p className="mb-4 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem" }}>
+          <p className="mb-4 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem", fontFamily: KT }}>
             +7 (351) 59-38-48 — отдел экологической просветительской работы
           </p>
-          <p className="mb-0.5" style={{ color: "#c5d55a", fontSize: "0.82rem" }}>museym-igs@rambler.ru</p>
-          <p style={{ color: "#c5d55a", fontSize: "0.82rem" }}>museym-igs@yandex.ru</p>
+          <p className="mb-0.5" style={{ color: "#c5d55a", fontSize: "0.82rem", fontFamily: KT }}>museym-igs@rambler.ru</p>
+          <p style={{ color: "#c5d55a", fontSize: "0.82rem", fontFamily: KT }}>museym-igs@yandex.ru</p>
           <div className="mt-6 pt-4 border-t border-white/10">
             <div className="w-20 h-[3px]" style={{ backgroundColor: G }} />
           </div>

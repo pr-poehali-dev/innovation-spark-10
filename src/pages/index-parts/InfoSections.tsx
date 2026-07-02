@@ -32,7 +32,7 @@ export const VisitorsSection = () => (
   <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
     <img src={AGATE_IMG} alt="" aria-hidden="true"
       className="absolute pointer-events-none select-none z-10"
-      style={{ right: 0, bottom: 0, width: "clamp(600px, 72vw, 960px)", opacity: 0.85 }} />
+      style={{ right: "-40px", bottom: 0, width: "clamp(750px, 88vw, 1200px)", opacity: 0.9 }} />
 
     <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
       <h2 className="mb-8" style={{ ...T, color: "#fff" }}>
@@ -120,7 +120,7 @@ export const ExcursionsSection = () => (
   <section id="excursions" className="relative py-10 px-6 md:px-16">
     <img src={CONES_IMG} alt="" aria-hidden="true"
       className="absolute pointer-events-none select-none"
-      style={{ right: "-20px", top: "0", bottom: "0", height: "100%", width: "auto", maxWidth: "22vw", objectFit: "contain", objectPosition: "top right", opacity: 0.3 }} />
+      style={{ right: "0", top: "0", bottom: "0", height: "100%", width: "auto", maxWidth: "32vw", objectFit: "contain", objectPosition: "top right", opacity: 0.5 }} />
 
     <div className="max-w-6xl mx-auto">
       <div className="border border-gray-300 flex items-stretch" style={{ minHeight: 400 }}>

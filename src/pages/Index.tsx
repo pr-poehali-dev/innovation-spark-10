@@ -129,11 +129,11 @@ const announcements = [
 ]
 
 const gallery = [
-  "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&h=900&fit=crop&q=100&fm=webp",
-  "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1400&h=900&fit=crop&q=100&fm=webp",
-  "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1400&h=900&fit=crop&q=100&fm=webp",
-  "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1400&h=900&fit=crop&q=100&fm=webp",
-  "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1400&h=900&fit=crop&q=100&fm=webp",
+  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/679cbfcb-45d1-4413-b14c-5a147bcdd6a8.jpg",
+  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/cbf8bf66-f1b5-46f6-aa8c-b9064776862c.jpg",
+  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/b46377b9-aaa6-43f8-bb4b-743d24e2d2e3.jpg",
+  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/4ab69fff-d32b-400e-a103-26bb02bc7616.jpg",
+  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/78daf662-1715-4fa1-9aad-694aa6938a72.png",
 ]
 
 const navLinks = [

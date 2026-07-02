@@ -183,6 +183,7 @@ export const CollectionsSection = () => (
     <div className="max-w-6xl mx-auto px-6 md:px-16 relative">
       <h2 style={{
         ...T,
+        fontSize: "clamp(2.8rem, 7vw, 6rem)",
         color: "#fff",
         textTransform: "uppercase",
         paddingTop: "2rem",

@@ -30,6 +30,14 @@ const GRASS_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab9
 const PINE_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/files/fcdc1f46-b998-490d-91db-9263ae932557.jpg"
 const EX_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/604e79a7-ac28-4c70-99cb-0b5c903273f1.png"
 
+/* ═══ ДЕКОРАТИВНЫЕ ГРАФИЧЕСКИЕ ИЗОБРАЖЕНИЯ ═══ */
+/* Агат — минерал, справа в блоке «О заповеднике» */
+const AGATE_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/d678ccb8-ba35-40c5-841e-5d7f44ee58b9.png"
+/* Шишки — ветка с шишками, над блоком «Экскурсии» */
+const CONES_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/7416f6ac-f580-45d8-952d-6e37fe09a6ba.png"
+/* Поползень — птица, под блоком «О заповеднике» слева */
+const BIRD_IMG = "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/82f7cd8d-8d1c-45a3-9b6c-42d2fbfd3ab3.png"
+
 /* ═══ ДЕКОРАТИВНЫЕ SVG ═══ */
 const BirdSVG = () => (
   <svg width="130" height="78" viewBox="0 0 130 78" fill="none" opacity="0.38">
@@ -209,11 +217,12 @@ const Index = () => {
       {/* ══════════════════════════════
           О ЗАПОВЕДНИКЕ
       ══════════════════════════════ */}
-      <section className="relative py-14 px-6 md:px-16 max-w-6xl mx-auto">
-        {/* Декор: ветка справа */}
-        <div className="absolute top-4 right-0 pointer-events-none select-none">
-          <BranchSVG />
-        </div>
+      <section className="relative py-14 px-6 md:px-16 max-w-6xl mx-auto overflow-visible">
+
+        {/* Агат — справа вверху, как в макете */}
+        <img src={AGATE_IMG} alt="" aria-hidden="true"
+          className="absolute pointer-events-none select-none"
+          style={{ top: "-20px", right: "-30px", width: "clamp(160px, 18vw, 260px)", opacity: 0.82 }} />
 
         <h2 style={T} className="mb-8">О заповеднике</h2>
         <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -234,9 +243,11 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Декор: птица внизу */}
-        <div className="mt-5 -mb-2">
-          <BirdSVG />
+        {/* Поползень — слева внизу, как в макете */}
+        <div className="relative mt-2">
+          <img src={BIRD_IMG} alt="" aria-hidden="true"
+            className="pointer-events-none select-none"
+            style={{ width: "clamp(110px, 13vw, 180px)", opacity: 0.78 }} />
         </div>
       </section>
 
@@ -258,10 +269,10 @@ const Index = () => {
           className="absolute top-0 right-0 h-full pointer-events-none select-none"
           style={{ width: "52%", objectFit: "cover", objectPosition: "center bottom", opacity: 0.55 }} />
 
-        {/* Кристалл SVG поверх фото */}
-        <div className="absolute right-8 bottom-4 pointer-events-none select-none z-10">
-          <CrystalSVG />
-        </div>
+        {/* Агат поверх фото — правый нижний угол, как в макете */}
+        <img src={AGATE_IMG} alt="" aria-hidden="true"
+          className="absolute pointer-events-none select-none z-10"
+          style={{ right: "2%", bottom: "0", width: "clamp(140px, 16vw, 220px)", opacity: 0.7 }} />
 
         <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
@@ -332,12 +343,12 @@ const Index = () => {
           Вертикальный заголовок по
           высоте сетки, сетка 3×2
       ══════════════════════════════ */}
-      {/* По макету: рамка вокруг всего блока, вертикальный заголовок, декор рыба справа вверху */}
+      {/* По макету: рамка вокруг всего блока, вертикальный заголовок, шишки справа вверху */}
       <section id="excursions" className="relative py-10 px-6 md:px-16">
-        {/* Декор: скелет рыбы — правый верхний угол */}
-        <div className="absolute right-2 top-2 pointer-events-none select-none">
-          <FishSVG />
-        </div>
+        {/* Шишки — правый верхний угол, как в макете */}
+        <img src={CONES_IMG} alt="" aria-hidden="true"
+          className="absolute pointer-events-none select-none"
+          style={{ right: "-10px", top: "-60px", width: "clamp(120px, 14vw, 200px)", opacity: 0.75 }} />
 
         <div className="max-w-6xl mx-auto">
           {/* Обёртка с рамкой — как в макете */}

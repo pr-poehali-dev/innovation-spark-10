@@ -248,28 +248,31 @@ const Index = () => {
           - выделенный блок часов работы
           - цены справа
       ══════════════════════════════ */}
+      {/* По макету: зелёный фон, слева тёмные блоки, справа — фото луга поверх фона */}
       <section className="relative overflow-hidden" style={{ backgroundColor: INFO_BG }}>
-        {/* Фото луга — фон */}
-        <img src={GRASS_IMG} alt="" aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          style={{ opacity: 0.17, objectPosition: "center" }} />
 
-        {/* Кристалл — правый нижний угол */}
-        <div className="absolute right-4 bottom-0 pointer-events-none select-none z-0">
+        {/* Фото луга — справа, видимое, как в макете */}
+        <img src={GRASS_IMG} alt="" aria-hidden="true"
+          className="absolute top-0 right-0 h-full pointer-events-none select-none"
+          style={{ width: "52%", objectFit: "cover", objectPosition: "center bottom", opacity: 0.55 }} />
+
+        {/* Кристалл SVG поверх фото */}
+        <div className="absolute right-8 bottom-4 pointer-events-none select-none z-10">
           <CrystalSVG />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-16 py-14">
+        <div className="relative z-20 max-w-6xl mx-auto px-6 md:px-16 py-14">
           <h2 className="mb-10" style={{ ...T, color: "#fff" }}>
             Информация<br />для посетителей
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+          {/* Левая колонка занимает ~45% ширины, правая — фото */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start" style={{ maxWidth: "58%" }}>
             {/* Левый столбец */}
-            <div className="space-y-3">
+            <div className="space-y-3" style={{ gridColumn: "1 / -1" }}>
               {/* Контакты */}
               <div className="rounded-xl p-5 text-sm text-white"
-                style={{ backgroundColor: "rgba(22,26,14,0.84)" }}>
+                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
                 <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
                   style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
                   Контакты
@@ -280,48 +283,43 @@ const Index = () => {
                 <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
               </div>
 
-              {/* ЧАСЫ РАБОТЫ — выделенный блок как в макете */}
+              {/* ЧАСЫ РАБОТЫ */}
               <div className="rounded-xl p-5 text-white"
-                style={{ backgroundColor: "rgba(22,26,14,0.84)" }}>
+                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
                 <p className="text-[10px] uppercase tracking-widest text-white/40 mb-4"
                   style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
                   Часы работы:
                 </p>
                 <div className="flex gap-8 items-start">
-                  {/* Пн–Пт */}
                   <div>
                     <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Пн — Пт</p>
-                    <p className="font-black leading-none" style={{ fontSize: "2.8rem", color: "#fff" }}>09:00</p>
+                    <p className="font-black leading-none" style={{ fontSize: "2.8rem" }}>09:00</p>
                     <p className="text-white/45 text-xs mt-1">— 17:00</p>
                   </div>
-                  <div className="w-px self-stretch bg-white/12 mx-1" />
-                  {/* Сб–Вс */}
+                  <div className="w-px self-stretch bg-white/15 mx-1" />
                   <div>
                     <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Сб — Вс</p>
-                    <p className="font-black leading-none" style={{ fontSize: "2.8rem", color: "#fff" }}>10:00</p>
+                    <p className="font-black leading-none" style={{ fontSize: "2.8rem" }}>10:00</p>
                     <p className="text-white/45 text-xs mt-1">— 16:00</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Правый столбец — цены */}
-            <div className="text-sm space-y-1.5 leading-relaxed text-white font-light">
-              <p>
-                <span className="font-semibold">Входной билет для взрослых</span> — 200 ₽
-              </p>
-              <p>
-                <span className="font-semibold">Входной билет для льготных категорий</span>
-                <span className="text-white/65"> (дети, школьники, студенты, пенсионеры)</span> — 100 ₽
-              </p>
-              <p><span className="font-semibold">Билет семейный</span> (2 взрослых + 2 детей) — 450 ₽</p>
-              <p className="pt-3 pb-0.5 text-[10px] uppercase tracking-widest text-white/40 font-semibold">Экскурсии</p>
-              <p>Для малых групп (1–7 человек) — 400 ₽</p>
-              <p>Для групп от 8 до 25 человек — 1 000 ₽</p>
-              <p className="pt-2 pb-0.5 text-[10px] uppercase tracking-widest text-white/40 font-semibold">Обзорные экскурсии</p>
-              <p>Для малых групп (1–7 человек) — 1 400 ₽</p>
-              <p>Для групп от 25+ человек — 2 000 ₽</p>
-              <p>Тематические экскурсии — 2 500 ₽</p>
+              {/* Цены */}
+              <div className="rounded-xl p-5 text-sm text-white font-light"
+                style={{ backgroundColor: "rgba(22,26,14,0.88)" }}>
+                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
+                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>
+                  Стоимость посещения
+                </p>
+                <p className="mb-1"><span className="font-semibold">Взрослый</span> — 200 ₽</p>
+                <p className="mb-1"><span className="font-semibold">Льготный</span> (дети, студенты, пенсионеры) — 100 ₽</p>
+                <p className="mb-1"><span className="font-semibold">Семейный</span> (2+2) — 450 ₽</p>
+                <p className="mt-2 text-white/50 text-[10px] uppercase tracking-wide">Экскурсии</p>
+                <p>Малые группы (1–7 чел.) — 400 ₽ &nbsp;|&nbsp; Группы 8–25 чел. — 1 000 ₽</p>
+                <p className="mt-1 text-white/50 text-[10px] uppercase tracking-wide">Обзорные</p>
+                <p>1–7 чел. — 1 400 ₽ &nbsp;|&nbsp; 25+ чел. — 2 000 ₽ &nbsp;|&nbsp; Тематические — 2 500 ₽</p>
+              </div>
             </div>
           </div>
         </div>
@@ -332,54 +330,58 @@ const Index = () => {
           Вертикальный заголовок по
           высоте сетки, сетка 3×2
       ══════════════════════════════ */}
-      <section id="excursions" className="relative py-14 px-6 md:px-16">
-        {/* Декор: скелет рыбы */}
-        <div className="absolute right-4 top-6 pointer-events-none select-none">
+      {/* По макету: рамка вокруг всего блока, вертикальный заголовок, декор рыба справа вверху */}
+      <section id="excursions" className="relative py-10 px-6 md:px-16">
+        {/* Декор: скелет рыбы — правый верхний угол */}
+        <div className="absolute right-2 top-2 pointer-events-none select-none">
           <FishSVG />
         </div>
 
-        <div className="max-w-6xl mx-auto flex gap-6 items-stretch">
-          {/* Вертикальный заголовок — растянут по высоте сетки */}
-          <div className="flex-shrink-0 flex items-center">
-            <h2 className="select-none"
-              style={{
-                ...T,
-                writingMode: "vertical-rl",
-                transform: "rotate(180deg)",
-                /* Размер подбираем так, чтобы слово «ЭКСКУРСИИ» заняло всю высоту сетки */
-                fontSize: "clamp(2rem, 4.5vw, 3.8rem)",
-                height: "100%",
-              }}>
-              Экскурсии
-            </h2>
-          </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Обёртка с рамкой — как в макете */}
+          <div className="border border-gray-300 flex items-stretch" style={{ minHeight: 400 }}>
 
-          {/* Сетка 3×2 */}
-          <div className="grid grid-cols-3 gap-3 flex-1">
-            {excursions.map((ex, i) => (
-              <a key={i} href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
-                className="group relative overflow-hidden rounded-lg block"
-                style={{ aspectRatio: "4/3", backgroundColor: "#1a1a1a" }}>
-                <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
-                  style={{
-                    backgroundImage: `url(${EX_IMG})`,
-                    backgroundSize: "300% 200%",
-                    backgroundPosition: ex.pos,
-                  }} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-                <div className="absolute inset-0 p-3 flex flex-col justify-between">
-                  <div className="flex justify-between items-start">
-                    <p className="text-white font-semibold text-sm leading-tight max-w-[82%]">{ex.title}</p>
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white/25 flex items-center justify-center ml-1">
-                      <svg viewBox="0 0 12 12" width="9" height="9" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round">
-                        <path d="M2 6h8M7 3l3 3-3 3"/>
-                      </svg>
+            {/* Вертикальный заголовок — левая колонка с рамкой справа */}
+            <div className="flex-shrink-0 flex items-center justify-center border-r border-gray-300 px-4"
+              style={{ width: "clamp(60px, 8vw, 100px)" }}>
+              <h2 className="select-none"
+                style={{
+                  ...T,
+                  writingMode: "vertical-rl",
+                  transform: "rotate(180deg)",
+                  fontSize: "clamp(1.6rem, 3.5vw, 3rem)",
+                }}>
+                Экскурсии
+              </h2>
+            </div>
+
+            {/* Сетка 3×2 — правая часть */}
+            <div className="grid grid-cols-3 gap-2 flex-1 p-3">
+              {excursions.map((ex, i) => (
+                <a key={i} href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
+                  className="group relative overflow-hidden block"
+                  style={{ aspectRatio: "4/3", backgroundColor: "#1a1a1a" }}>
+                  <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                    style={{
+                      backgroundImage: `url(${EX_IMG})`,
+                      backgroundSize: "300% 200%",
+                      backgroundPosition: ex.pos,
+                    }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 p-3 flex flex-col justify-between">
+                    <div className="flex justify-between items-start">
+                      <p className="text-white font-semibold text-sm leading-tight max-w-[82%]">{ex.title}</p>
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center ml-1">
+                        <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">
+                          <path d="M2 6h8M7 3l3 3-3 3"/>
+                        </svg>
+                      </div>
                     </div>
+                    <p className="text-white/65 text-xs leading-tight">{ex.sub}</p>
                   </div>
-                  <p className="text-white/70 text-xs leading-tight">{ex.sub}</p>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -387,24 +389,39 @@ const Index = () => {
       {/* ══════════════════════════════
           КОЛЛЕКЦИИ
       ══════════════════════════════ */}
-      <section id="collections" className="py-14 px-6 md:px-16" style={{ backgroundColor: G }}>
+      {/* По макету: зелёный фон снизу, белый блок с крупным заголовком сверху, фото без скруглений */}
+      <section id="collections" className="px-6 md:px-16 pb-10" style={{ backgroundColor: G }}>
         <div className="max-w-6xl mx-auto">
-          <h2 style={{ ...T, color: "#fff" }} className="mb-8">Коллекции</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {collections.map((col, i) => (
-              <a key={i} href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
-                className="bg-white rounded-lg overflow-hidden group block hover:shadow-lg transition-shadow">
-                <img src={col.img} alt={col.title}
-                  className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => { e.currentTarget.src = col.fb }} />
-                <div className="p-3">
-                  <p className="text-xs font-semibold text-gray-800 leading-tight">{col.title}</p>
-                  <p className="text-[10px] text-gray-500 leading-tight mt-0.5 font-light">{col.subtitle}</p>
-                  <span className="inline-block mt-2 px-4 py-1 rounded-full text-white text-xs cursor-pointer"
+          {/* Белый блок-карточка */}
+          <div className="bg-white" style={{ padding: "28px 28px 24px" }}>
+            {/* Заголовок крупный, строчные буквы, как в макете */}
+            <h2 className="mb-8" style={{
+              fontFamily: KT,
+              fontWeight: 300,
+              fontSize: "clamp(2.4rem, 6vw, 5rem)",
+              lineHeight: 1.0,
+              letterSpacing: "0.04em",
+              color: "#2a2a2a",
+              textTransform: "lowercase",
+            }}>коллекции</h2>
+
+            {/* Сетка фото */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+              {collections.map((col, i) => (
+                <a key={i} href="https://museum-igz.chelscience.ru/" target="_blank" rel="noopener noreferrer"
+                  className="group block">
+                  {/* Фото без скруглений, как в макете */}
+                  <img src={col.img} alt={col.title}
+                    className="w-full object-cover group-hover:opacity-90 transition-opacity"
+                    style={{ height: 140, display: "block" }}
+                    onError={(e) => { e.currentTarget.src = col.fb }} />
+                  <p className="text-xs text-gray-700 leading-tight mt-2 font-light">{col.title}</p>
+                  <p className="text-[10px] text-gray-400 leading-tight mt-0.5 font-light">{col.subtitle}</p>
+                  <span className="inline-block mt-3 px-5 py-1.5 rounded-full text-white text-xs cursor-pointer font-light"
                     style={{ backgroundColor: G }}>подробнее</span>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -473,49 +490,56 @@ const Index = () => {
       </section>
 
       {/* ══════════════════════════════
-          КОНЕЦ СТРАНИЦЫ — по макету:
-          сосна слева, трава, «Ждём вас
-          в гости!», сосна справа
+          КОНЕЦ СТРАНИЦЫ — точно по макету «ждем вас.png»:
+          белый фон, сосна слева, текст по центру,
+          сосна справа, снизу фото луга
       ══════════════════════════════ */}
-      <div className="relative overflow-hidden bg-white" style={{ minHeight: 380 }}>
+      <div className="relative overflow-hidden bg-white" style={{ minHeight: 340 }}>
 
-        {/* Сосна большая — слева */}
+        {/* Сосна большая — слева, на весь рост */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
           className="absolute left-0 bottom-0 pointer-events-none select-none"
           style={{
-            height: "94%", width: "auto", maxWidth: "23%",
-            objectFit: "contain", objectPosition: "bottom left",
+            height: "95%",
+            width: "auto",
+            maxWidth: "26%",
+            objectFit: "contain",
+            objectPosition: "bottom left",
             mixBlendMode: "multiply",
           }} />
 
-        {/* Сосна меньше — правее центра */}
+        {/* Сосна справа — меньше */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 pointer-events-none select-none"
+          className="absolute bottom-0 right-4 pointer-events-none select-none"
           style={{
-            right: "5%",
-            height: "70%", width: "auto", maxWidth: "16%",
-            objectFit: "contain", objectPosition: "bottom right",
-            mixBlendMode: "multiply", opacity: 0.85,
+            height: "78%",
+            width: "auto",
+            maxWidth: "19%",
+            objectFit: "contain",
+            objectPosition: "bottom right",
+            mixBlendMode: "multiply",
           }} />
 
-        {/* Трава — нижняя полоса */}
+        {/* Фото луга — нижняя треть */}
         <img src={GRASS_IMG} alt="" aria-hidden="true"
           className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
           style={{
-            height: "42%", objectFit: "cover",
-            objectPosition: "bottom center", mixBlendMode: "multiply",
+            height: "44%",
+            objectFit: "cover",
+            objectPosition: "bottom center",
+            mixBlendMode: "multiply",
           }} />
 
-        {/* Надпись по центру */}
-        <div className="relative z-10 flex flex-col items-center justify-center py-20 text-center px-4">
+        {/* Надпись — по центру поверх всего */}
+        <div className="relative z-10 flex flex-col items-center justify-center py-16 text-center px-4">
           <h2 style={{
             fontFamily: RADIO,
             fontWeight: 900,
-            fontSize: "clamp(3rem, 8.5vw, 6.5rem)",
+            fontSize: "clamp(3.2rem, 9vw, 7rem)",
             color: G,
             textTransform: "uppercase",
             lineHeight: 1.0,
-            letterSpacing: "0.02em",
+            letterSpacing: "0.03em",
           }}>
             Ждем вас<br />в гости!
           </h2>
@@ -523,27 +547,25 @@ const Index = () => {
       </div>
 
       {/* ══════════════════════════════
-          ФУТЕР
+          ФУТЕР — тёмный, по макету
       ══════════════════════════════ */}
-      <footer className="text-white py-10 px-6 md:px-16" style={{ backgroundColor: "#252a14" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <p className="text-[10px] uppercase tracking-widest mb-4 text-white/35 font-semibold"
-              style={{ letterSpacing: "0.14em" }}>Контакты</p>
-            <p className="text-sm font-light mb-1">+7 (351) 59-82-72 — основной</p>
-            <p className="text-sm font-light mb-3">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
-            <p className="text-sm" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
-            <p className="text-sm" style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
+      <footer className="text-white py-8 px-6 md:px-16" style={{ backgroundColor: "#2d3022" }}>
+        <div className="max-w-6xl mx-auto">
+          <p className="text-[11px] uppercase tracking-widest mb-4 font-bold"
+            style={{ color: "#fff", letterSpacing: "0.12em" }}>
+            • КОНТАКТЫ
+          </p>
+          <p className="text-sm font-light mb-1" style={{ color: "rgba(255,255,255,0.75)" }}>
+            + 7 (351) 59-82-72 — основной
+          </p>
+          <p className="text-sm font-light mb-4" style={{ color: "rgba(255,255,255,0.75)" }}>
+            +7 (351) 59-38-48 — отдел экологической просветительской работы
+          </p>
+          <p className="text-sm mb-0.5" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
+          <p className="text-sm" style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
+          <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2">
+            <div className="w-16 h-1 rounded" style={{ backgroundColor: G }} />
           </div>
-          <div>
-            <p className="text-[10px] uppercase tracking-widest mb-4 text-white/35 font-semibold"
-              style={{ letterSpacing: "0.14em" }}>Адрес</p>
-            <p className="text-sm font-light text-white/60">456317 Челябинская обл., г. Миасс,</p>
-            <p className="text-sm font-light text-white/60">Ильменский заповедник</p>
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto mt-8 pt-5 border-t border-white/10">
-          <p className="text-xs text-white/20">© 2026 Ильменский заповедник</p>
         </div>
       </footer>
 

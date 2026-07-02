@@ -132,8 +132,6 @@ const gallery = [
   "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/679cbfcb-45d1-4413-b14c-5a147bcdd6a8.jpg",
   "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/cbf8bf66-f1b5-46f6-aa8c-b9064776862c.jpg",
   "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/b46377b9-aaa6-43f8-bb4b-743d24e2d2e3.jpg",
-  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/4ab69fff-d32b-400e-a103-26bb02bc7616.jpg",
-  "https://cdn.poehali.dev/projects/425a6007-c78c-4075-a54c-6ab952084b9f/bucket/78daf662-1715-4fa1-9aad-694aa6938a72.png",
 ]
 
 const navLinks = [

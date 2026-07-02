@@ -184,7 +184,7 @@ export const CollectionsSection = () => (
       <h2 style={{
         fontFamily: KT,
         fontWeight: 300,
-        fontSize: "clamp(2.8rem, 7vw, 6rem)",
+        fontSize: "clamp(1.8rem, 4vw, 3.4rem)",
         lineHeight: 1.0,
         letterSpacing: "0.04em",
         color: "#fff",

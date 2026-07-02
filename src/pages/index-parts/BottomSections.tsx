@@ -90,7 +90,7 @@ export const BottomSections = ({
         } as React.CSSProperties}
       />
       <div className="absolute inset-0 flex items-start justify-center"
-        style={{ paddingTop: "5%", paddingLeft: "25%", paddingRight: "20%" }}>
+        style={{ paddingTop: "12%", paddingLeft: "25%", paddingRight: "20%" }}>
         <h2 style={{
           fontFamily: RADIO,
           fontWeight: 900,

@@ -355,14 +355,16 @@ const Index = () => {
           <div className="border border-gray-300 flex items-stretch" style={{ minHeight: 400 }}>
 
             {/* Вертикальный заголовок — левая колонка с рамкой справа */}
-            <div className="flex-shrink-0 flex items-center justify-center border-r border-gray-300 px-4"
-              style={{ width: "clamp(60px, 8vw, 100px)" }}>
+            <div className="flex-shrink-0 flex items-center justify-center border-r border-gray-300 px-3"
+              style={{ width: "clamp(80px, 10vw, 130px)" }}>
               <h2 className="select-none"
                 style={{
                   ...T,
                   writingMode: "vertical-rl",
                   transform: "rotate(180deg)",
-                  fontSize: "clamp(1.6rem, 3.5vw, 3rem)",
+                  fontSize: "clamp(2.4rem, 5.5vw, 5rem)",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.12em",
                 }}>
                 Экскурсии
               </h2>

@@ -286,53 +286,90 @@ const Index = () => {
             Информация<br />для посетителей
           </h2>
 
-          {/* Три колонки: контакты | часы | цены — в левых 55% */}
-          <div className="grid gap-4" style={{ maxWidth: "55%" }}>
+          {/* Два столбца: карточки | прайс */}
+          <div className="flex gap-5 items-start" style={{ maxWidth: "58%" }}>
 
-            {/* Контакты */}
-            <div className="p-4 text-sm text-white"
-              style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
-              <p className="text-[10px] uppercase tracking-widest text-white/40 mb-2"
-                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Контакты</p>
-              <p className="mb-1 font-light">+7 (351) 59-82-72 — основной</p>
-              <p className="font-light">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
-              <p className="mt-2" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
-              <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
+            {/* Левый столбец — контакты + часы работы */}
+            <div className="flex flex-col gap-4 flex-shrink-0" style={{ minWidth: 220 }}>
+
+              {/* Контакты */}
+              <div className="p-4 text-sm text-white"
+                style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
+                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-2"
+                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Контакты</p>
+                <p className="mb-1 font-light">+7 (351) 59-82-72 — основной</p>
+                <p className="font-light">+7 (351) 59-38-48 — отдел экологической просветительской работы</p>
+                <p className="mt-2" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
+                <p style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
+              </div>
+
+              {/* Часы работы */}
+              <div className="p-4 text-white"
+                style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
+                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
+                  style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Часы работы:</p>
+                <div className="flex gap-6 items-start">
+                  <div>
+                    <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Пн — Пт</p>
+                    <p className="font-black leading-none" style={{ fontSize: "2.4rem" }}>09:00</p>
+                    <p className="text-white/45 text-xs mt-1">до 17:00</p>
+                  </div>
+                  <div className="w-px self-stretch bg-white/15" />
+                  <div>
+                    <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Сб — Вс</p>
+                    <p className="font-black leading-none" style={{ fontSize: "2.4rem" }}>10:00</p>
+                    <p className="text-white/45 text-xs mt-1">до 16:00</p>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
-            {/* Часы работы */}
-            <div className="p-4 text-white"
+            {/* Правый столбец — прайс */}
+            <div className="p-4 text-white text-sm flex-1"
               style={{ backgroundColor: "rgba(22,26,14,0.88)", borderRadius: 8 }}>
               <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3"
-                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Часы работы:</p>
-              <div className="flex gap-8 items-start">
-                <div>
-                  <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Пн — Пт</p>
-                  <p className="font-black leading-none" style={{ fontSize: "2.6rem" }}>09:00</p>
-                  <p className="text-white/45 text-xs mt-1">до 17:00</p>
+                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Стоимость посещения</p>
+
+              <div className="space-y-1.5 font-light">
+                <div className="flex justify-between gap-4">
+                  <span>Входной билет для взрослых</span>
+                  <span className="font-semibold whitespace-nowrap">200 ₽</span>
                 </div>
-                <div className="w-px self-stretch bg-white/15" />
-                <div>
-                  <p className="text-white/45 text-[10px] uppercase tracking-wide mb-1">Сб — Вс</p>
-                  <p className="font-black leading-none" style={{ fontSize: "2.6rem" }}>10:00</p>
-                  <p className="text-white/45 text-xs mt-1">до 16:00</p>
+                <div className="flex justify-between gap-4">
+                  <span>Льготный <span className="text-white/50 text-xs">(дети, студенты, пенсионеры)</span></span>
+                  <span className="font-semibold whitespace-nowrap">100 ₽</span>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <span>Семейный билет <span className="text-white/50 text-xs">(2 взр. + 2 дет.)</span></span>
+                  <span className="font-semibold whitespace-nowrap">450 ₽</span>
+                </div>
+              </div>
+
+              <div className="w-full h-px bg-white/10 my-3" />
+
+              <p className="text-[10px] uppercase tracking-widest text-white/40 mb-2"
+                style={{ fontFamily: KT, fontWeight: 600, letterSpacing: "0.15em" }}>Экскурсии для групп от 6 до 25 человек</p>
+              <div className="space-y-1.5 font-light">
+                <div className="flex justify-between gap-4">
+                  <span>Обзорная экскурсия <span className="text-white/50 text-xs">(до 7 чел.)</span></span>
+                  <span className="font-semibold whitespace-nowrap">1 000 ₽</span>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <span>Обзорная экскурсия <span className="text-white/50 text-xs">(8–25 чел.)</span></span>
+                  <span className="font-semibold whitespace-nowrap">1 400 ₽</span>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <span>Обзорная экскурсия <span className="text-white/50 text-xs">(26–75 чел.)</span></span>
+                  <span className="font-semibold whitespace-nowrap">2 000 ₽</span>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <span>Тематическая экскурсия</span>
+                  <span className="font-semibold whitespace-nowrap">2 500 ₽</span>
                 </div>
               </div>
             </div>
 
-          </div>
-
-          {/* Цены — справа от карточек, поверх фото, текстом */}
-          <div className="absolute top-14 text-white text-sm font-light leading-relaxed"
-            style={{ right: "calc(50% + 2rem)", left: "calc(55% + 1.5rem + 3rem)", display: "none" }} />
-
-          {/* Цены — отдельная строка под карточками */}
-          <div className="mt-4 text-white text-sm font-light leading-relaxed" style={{ maxWidth: "55%" }}>
-            <p><span className="font-semibold">Входной билет для взрослых</span> — 200 ₽</p>
-            <p><span className="font-semibold">Льготный</span> (дети, студенты, пенсионеры) — 100 ₽</p>
-            <p><span className="font-semibold">Семейный</span> (2+2) — 450 ₽</p>
-            <p className="mt-2 text-white/50 text-[10px] uppercase tracking-wide">Экскурсии для малых групп (1–7 чел.) — 400 ₽ | Группы 8–25 чел. — 1 000 ₽</p>
-            <p className="text-white/50 text-[10px] uppercase tracking-wide">Обзорные: 1–7 чел. — 1 400 ₽ | 25+ — 2 000 ₽ | Тематические — 2 500 ₽</p>
           </div>
 
         </div>

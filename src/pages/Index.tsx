@@ -490,52 +490,52 @@ const Index = () => {
       </section>
 
       {/* ══════════════════════════════
-          КОНЕЦ СТРАНИЦЫ — точно по макету «ждем вас.png»:
-          белый фон, сосна слева, текст по центру,
-          сосна справа, снизу фото луга
+          КОНЕЦ СТРАНИЦЫ — по макету image(23):
+          белый фон, сосны по бокам,
+          фото луга снизу на всю ширину
       ══════════════════════════════ */}
-      <div className="relative overflow-hidden bg-white" style={{ minHeight: 340 }}>
+      <div className="relative overflow-hidden bg-white" style={{ minHeight: 420 }}>
 
-        {/* Сосна большая — слева, на весь рост */}
+        {/* Сосна большая — слева */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
           className="absolute left-0 bottom-0 pointer-events-none select-none"
           style={{
-            height: "95%",
+            height: "100%",
             width: "auto",
-            maxWidth: "26%",
+            maxWidth: "28%",
             objectFit: "contain",
             objectPosition: "bottom left",
             mixBlendMode: "multiply",
           }} />
 
-        {/* Сосна справа — меньше */}
+        {/* Сосна справа — чуть меньше */}
         <img src={PINE_IMG} alt="" aria-hidden="true"
-          className="absolute bottom-0 right-4 pointer-events-none select-none"
+          className="absolute bottom-0 right-0 pointer-events-none select-none"
           style={{
-            height: "78%",
+            height: "82%",
             width: "auto",
-            maxWidth: "19%",
+            maxWidth: "22%",
             objectFit: "contain",
             objectPosition: "bottom right",
             mixBlendMode: "multiply",
           }} />
 
-        {/* Фото луга — нижняя треть */}
+        {/* Фото луга — нижняя полоса, на всю ширину */}
         <img src={GRASS_IMG} alt="" aria-hidden="true"
           className="absolute bottom-0 left-0 right-0 w-full pointer-events-none select-none"
           style={{
-            height: "44%",
+            height: "48%",
             objectFit: "cover",
-            objectPosition: "bottom center",
-            mixBlendMode: "multiply",
+            objectPosition: "center bottom",
           }} />
 
-        {/* Надпись — по центру поверх всего */}
-        <div className="relative z-10 flex flex-col items-center justify-center py-16 text-center px-4">
+        {/* Надпись — по центру, крупно */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4"
+          style={{ paddingTop: "3rem", paddingBottom: "10rem" }}>
           <h2 style={{
             fontFamily: RADIO,
             fontWeight: 900,
-            fontSize: "clamp(3.2rem, 9vw, 7rem)",
+            fontSize: "clamp(4rem, 12vw, 9.5rem)",
             color: G,
             textTransform: "uppercase",
             lineHeight: 1.0,
@@ -549,22 +549,21 @@ const Index = () => {
       {/* ══════════════════════════════
           ФУТЕР — тёмный, по макету
       ══════════════════════════════ */}
-      <footer className="text-white py-8 px-6 md:px-16" style={{ backgroundColor: "#2d3022" }}>
+      <footer className="text-white py-8 px-8" style={{ backgroundColor: "#2d3022" }}>
         <div className="max-w-6xl mx-auto">
-          <p className="text-[11px] uppercase tracking-widest mb-4 font-bold"
-            style={{ color: "#fff", letterSpacing: "0.12em" }}>
+          <p className="font-bold mb-4" style={{ color: "#fff", fontSize: "0.85rem", letterSpacing: "0.05em" }}>
             • КОНТАКТЫ
           </p>
-          <p className="text-sm font-light mb-1" style={{ color: "rgba(255,255,255,0.75)" }}>
+          <p className="mb-1 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem" }}>
             + 7 (351) 59-82-72 — основной
           </p>
-          <p className="text-sm font-light mb-4" style={{ color: "rgba(255,255,255,0.75)" }}>
+          <p className="mb-4 font-light" style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.82rem" }}>
             +7 (351) 59-38-48 — отдел экологической просветительской работы
           </p>
-          <p className="text-sm mb-0.5" style={{ color: "#c5d55a" }}>museym-igs@rambler.ru</p>
-          <p className="text-sm" style={{ color: "#c5d55a" }}>museym-igs@yandex.ru</p>
-          <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2">
-            <div className="w-16 h-1 rounded" style={{ backgroundColor: G }} />
+          <p className="mb-0.5" style={{ color: "#c5d55a", fontSize: "0.82rem" }}>museym-igs@rambler.ru</p>
+          <p style={{ color: "#c5d55a", fontSize: "0.82rem" }}>museym-igs@yandex.ru</p>
+          <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="w-20 h-[3px]" style={{ backgroundColor: G }} />
           </div>
         </div>
       </footer>

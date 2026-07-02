@@ -182,13 +182,9 @@ export const CollectionsSection = () => (
   <section id="collections" className="relative pt-0 pb-10 px-0" style={{ backgroundColor: G }}>
     <div className="max-w-6xl mx-auto px-6 md:px-16 relative">
       <h2 style={{
-        fontFamily: KT,
-        fontWeight: 300,
-        fontSize: "clamp(1.8rem, 4vw, 3.4rem)",
-        lineHeight: 1.0,
-        letterSpacing: "0.04em",
+        ...T,
         color: "#fff",
-        textTransform: "lowercase",
+        textTransform: "uppercase",
         paddingTop: "2rem",
         paddingBottom: "1rem",
         display: "block",
